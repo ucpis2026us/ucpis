@@ -1,19 +1,75 @@
-# Annex A — Agent-Agnostic Interfaces & Human Autonomy Profiles
+# Annex A — Reference Definitions & Taxonomy
 
-**Status:** Informative / Non-Normative  
-**Version:** 1.1  
-**License:** CC BY 4.0  
-**Attribution Required:** Michael James Malecek (2026)  
-**Canonical Repository:** https://github.com/ucpis2026us  
-**Contact:** ucpis2026@gmail.com
+This annex defines canonical terms, classifications, and concepts used throughout
+the Universal Cyber-Physical Interoperability Stack (UCPIS). Definitions in this
+annex are normative unless explicitly stated otherwise.
 
-This annex defines functional human autonomy profiles for use in
-cyber-physical system design. Profiles are contextual and non-diagnostic.
+---
 
-Classes defined: L, M, N, H, X.
+## A.12 Human Autonomy Classes
 
-Profiles describe interface requirements, not human worth, intelligence,
-or authority.
+UCPIS models human participants as first-class system actors. Human Autonomy Classes
+are descriptive constructs used to inform interface design, authority boundaries,
+and safety assumptions across the stack.
 
-UCPIS is designed to support participation across the full autonomy
-spectrum through adaptive cyber-physical compensation.
+These classes are not evaluative judgments of human worth or status. They exist
+solely to support safe, scalable, and predictable system design.
+
+---
+
+### Class-L — Low-Autonomy Operators
+
+**Capabilities**
+- Limited planning and task sequencing
+- Constrained symbolic reasoning
+- Reduced executive function and error recovery
+- Limited temporal reasoning and safety judgment
+
+**Primary Function**
+- Execute narrowly defined, highly structured tasks
+
+**Design Doctrine**
+> Make the correct action the default; make dangerous actions impossible.
+
+---
+
+### Class-M — Mid-Autonomy Technicians / Supervisors
+
+**Capabilities**
+- Execute and oversee standard operating procedures (SOPs)
+- Perform basic diagnostics and troubleshooting
+- Escalate anomalies appropriately
+- Coordinate small teams or workcells
+
+**Primary Function**
+- Maintain operational continuity within defined bounds
+
+**Design Doctrine**
+> Provide leverage with rails and guardrails.
+
+---
+
+### Class-H — High-Autonomy / High-Leverage Architects
+
+**Capabilities**
+- System-level reasoning
+- Cross-domain integration
+- Long-horizon planning
+- Ethical, strategic, and institutional judgment
+
+**Primary Function**
+- Define architecture, policy, and system constraints
+
+**Design Doctrine**
+> Amplify structurally — one Class-H can shape thousands of workcells.
+
+---
+
+### Class-X — Augmented / Composite Actors (Informational)
+
+**Capabilities**
+- Human actors operating in concert with advanced tools or AI systems
+
+**Status**
+Class-X is informational only in UCPIS v1.3. No normative requirements,
+interfaces, or governance assumptions are defined at this stage.
