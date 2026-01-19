@@ -1,38 +1,24 @@
-# Universal Cyber-Physical Interoperability Stack (UCPIS)
-
-The Universal Cyber-Physical Interoperability Stack (UCPIS) is an open,
-non-proprietary reference architecture for coordinating artificial
-intelligence, autonomous machines, manufacturing systems, logistics
-networks, energy infrastructure, and human governance.
-
-UCPIS defines a layered, interface-first architectural framework intended
-to reduce fragmentation across cyber-physical systems by enabling
-interoperability, modular substitution, and constraint-aware coordination.
-
-## Status
-
-- Reference Architecture v0.1
-- Informative and non-normative
-- No implementations, products, or standards are defined
-
 ## Contents
 
-- UCPIS White Paper v1.3
-- Supporting Annexes A–E (informative)
-- Governance guidance
-- Release notes and citation metadata
+### Core Document
+- UCPIS White Paper v1.3 — Public Reference Architecture
 
-## Attribution
+### Supporting Annexes (Informative)
+- Annex A v1.1 — Agent-Agnostic Interfaces & Human Autonomy Profiles
+- Annex B v1.0 — AI as Electrical and Thermal Load
+- Annex C v1.0 — Reference Architecture Diagrams
+- Annex D v1.0 — Threat Model & Resilience
+- Annex E v1.0 — Standards Alignment & Mapping
 
-The Universal Cyber-Physical Interoperability Stack (UCPIS) was invented
-in 2026 by **Michael James Malecek**.
+### Deferred Annexes (Reserved)
+The following annexes are intentionally reserved and **not published**.
+They will be authored only upon meeting explicit activation criteria.
 
-## License
+- Annex F — Reference Implementation Guidelines  
+  *(Deferred until open, inspectable code exists)*
 
-All materials are licensed under the  
-Creative Commons Attribution 4.0 International License (CC BY 4.0).
+- Annex G — Governance Models  
+  *(Deferred until real-world adoption and delegated stewardship occur)*
 
-## Contact
-
-For correspondence related to UCPIS, contact:  
-**ucpis2026@gmail.com**
+- Annex H — Interoperability Profiles  
+  *(Deferred until pilot deployments or empirical evidence exist)*
