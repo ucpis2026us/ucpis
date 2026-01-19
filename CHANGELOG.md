@@ -1,17 +1,19 @@
 # Changelog
 
-## [Unreleased]
-### Reserved
-- Reserved Annex F — Reference Implementation Guidelines (deferred until code exists)
-- Reserved Annex G — Governance Models (deferred until adoption and stewardship)
-- Reserved Annex H — Interoperability Profiles (deferred until pilot deployments)
+All notable changes to the Universal Cyber-Physical Interoperability Stack (UCPIS)
+are documented in this file.
 
-## [1.3] — 2026
+---
+
+## [v1.3] — Human Autonomy Integration
+
 ### Added
-- Public Reference Architecture v1.3
-- Annexes A–E (informative, non-normative)
-- Release notes and citation metadata
+- Formal Human Autonomy Classes (Class-L, Class-M, Class-H)
+- Informational Class-X designation (non-normative)
+- Explicit human-to-layer integration model
+- Human-in-the-loop failure mode analysis by class
 
-### Clarified
-- No normative security controls are defined
-- Architecture-only scope and maturity (reference architecture v0.1)
+### Notes
+- No governance models introduced
+- No normative security controls added
+- Class-X remains explicitly deferred
