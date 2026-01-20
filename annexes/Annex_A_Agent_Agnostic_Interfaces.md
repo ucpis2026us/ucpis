@@ -122,8 +122,6 @@ Relevant constructs:
 
 # A.8 Human Autonomy Classes
 
-## A.8 Human Autonomy Classes
-
 UCPIS models human participants as **first-class system actors**. Human Autonomy Classes are descriptive constructs used to inform interface design, authority boundaries, and safety assumptions across the stack.
 
 These classes are **not evaluative judgments of human worth or status**. They exist solely to support safe, scalable, and predictable system design.
@@ -191,8 +189,6 @@ Class-X is informational only in UCPIS v1.4. No normative requirements, interfac
 
 # A.9 Constrained Human–Machine Interfaces (HMIs)
 
-## A.9 Constrained Human–Machine Interfaces (HMIs)
-
 **Definition (Normative)**  
 A **Constrained HMI** is a class-scoped, safety-bounded interaction surface through which human actors participate in cyber-physical systems. Constrained HMIs expose only those actions, affordances, and state representations that a given human class MAY safely execute or interpret.
 
@@ -245,8 +241,6 @@ All Constrained HMIs SHALL respect cyber-physical safety envelopes including:
 ---
 
 # A.11 Non-Human Biological Actors *(Informational)*
-
-## A.11 Non-Human Biological Actors *(Informational)*
 
 UCPIS may interface indirectly or directly with non-human biological entities in certain cyber-physical environments, including but not limited to agriculture, research facilities, environmental monitoring, logistics perimeters, or containment systems.
 
