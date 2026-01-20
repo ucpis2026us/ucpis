@@ -31,7 +31,7 @@ This annex covers:
 
 - A definition of **Minimum Viable UCPIS-Executable (MVUE)**
 - Canonical **reference harness** concepts
-- Example **interface categories** and illustrative message schemas
+- Example **interface categories** and illustrative message-field conventions
 - Versioning and lifecycle guidelines for interfaces and artifacts
 - Publication gating: when and how reference code should be released
 
@@ -76,8 +76,8 @@ Reference code should demonstrate that **interfaces are capability-scoped** and 
 
 An artifact qualifies as MVUE if it:
 
-1. **Implements at least one UCPIS interface contract** (schema + semantics)
-2. Demonstrates at least one **round-trip flow** (e.g., command → state change → ack)
+1. **Implements at least one UCPIS interface contract** (field requirements + semantics)
+2. Demonstrates at least one **round-trip flow** (e.g., command → state change → acknowledgement)
 3. Produces **logs/events** sufficient for replay and audit
 4. Is runnable in a minimal environment (local container or simple host runtime)
 5. Is **clearly labeled non-normative** and includes a “what this proves / what it does not” section
@@ -99,7 +99,7 @@ UCPIS is interface-first. Reference implementations should organize interfaces i
 | **Physical State** | L1 → L3 | 1→3 | Telemetry and status of devices/cells |
 | **Command / Actuation** | L3 → L1 | 3→1 | Controlled actuation requests |
 | **Task Assignment** | L3 → L2 | 3→2 | Human-mediated work instruction |
-| **Acknowledgement / Completion** | L2 → L3 | 2→3 | Human feedback, confirm/abort/escalate |
+| **Acknowledgement / Completion** | L2 → L3 | 2→3 | Human feedback (confirm/abort/escalate) |
 | **Policy / Governance** | L3 ↔ L3 | 3↔3 | Constraints, roles, permissions, audit framing |
 | **Audit / Event Log** | All → Log | all | Replayable events and traceability |
 
@@ -111,17 +111,17 @@ UCPIS is interface-first. Reference implementations should organize interfaces i
 
 Reference implementations should adopt lightweight, consistent conventions.
 
-### F.5.1 Required Envelope Fields (Recommended)
+### F.5.1 Recommended Message Envelope Fields
 
 All messages SHOULD include:
 
-- `ucpis_version`: semantic version of UCPIS interface envelope
-- `interface_id`: stable identifier, e.g., `task.assignment.v1`
-- `message_id`: UUID for traceability
-- `timestamp`: ISO-8601
-- `source`: component identifier (device/orchestrator/hmi)
-- `target`: intended recipient identifier (optional for pub/sub)
-- `correlation_id`: links related message chains (optional but recommended)
+- `ucpis_version` — semantic version of the UCPIS envelope
+- `interface_id` — stable identifier (example: `task.assignment.v1`)
+- `message_id` — unique identifier for traceability
+- `timestamp` — ISO-8601 time
+- `source` — component identifier (device/orchestrator/hmi)
+- `target` — intended recipient identifier (optional for pub/sub)
+- `correlation_id` — links related message chains (optional but recommended)
 
 ### F.5.2 Capability Scoping
 
@@ -134,30 +134,143 @@ Interfaces SHOULD include explicit capability constraints:
 
 ---
 
-## F.6 Illustrative Schemas (Non-Normative Examples)
+## F.6 Illustrative Message Patterns (Non-Normative)
 
-The following examples are **illustrative**. Implementers may choose JSON Schema, OpenAPI, AsyncAPI, Protobuf, or other formats.
+This section provides **field-level patterns** without embedding full structured examples.
 
-### F.6.1 Task Assignment (L3 → L2) — Class-L Constrained
+### F.6.1 Task Assignment (L3 → L2)
 
-```json
-{
-  "ucpis_version": "1.0.0",
-  "interface_id": "task.assignment.v1",
-  "message_id": "uuid",
-  "timestamp": "2026-01-19T00:00:00Z",
-  "correlation_id": "uuid",
-  "human_class": "Class-L",
-  "task_id": "uuid",
-  "workcell_id": "cell-01",
-  "instructions": [
-    {"step": 1, "text": "Pick part from bin A"},
-    {"step": 2, "text": "Place part on fixture"},
-    {"step": 3, "text": "Press CONFIRM when seated"}
-  ],
-  "constraints": {
-    "timeout_sec": 300,
-    "allowed_actions": ["confirm", "abort", "escalate"],
-    "safety_interlocks_required": true
-  }
-}
+A task assignment message SHOULD include:
+
+- `task_id`
+- `workcell_id` (or `location_id`)
+- `human_class` (when routed to human mediation)
+- `instructions` as an ordered list of steps
+- `constraints` including:
+  - `timeout_sec`
+  - `allowed_actions` (for Class-L: typically confirm/abort/escalate)
+  - any required preconditions (interlocks, required device state)
+
+### F.6.2 Acknowledgement / Completion (L2 → L3)
+
+An acknowledgement message SHOULD include:
+
+- `task_id`
+- `actor` (role- or class-based identifier)
+- `result` (confirm / abort / escalate)
+- optional `notes`
+- optional `observations` (e.g., anomaly flag, assistance required)
+
+### F.6.3 Physical State (L1 → L3)
+
+A device state message SHOULD include:
+
+- `device_id`
+- `workcell_id`
+- `state` (ready / running / fault / offline, etc.)
+- optional `mode` (manual / auto / maintenance)
+- optional `telemetry` (key-value)
+- optional `faults` list
+
+### F.6.4 Command / Actuation (L3 → L1)
+
+A command message SHOULD include:
+
+- `device_id`
+- `command` name
+- `params` (command parameters)
+- `constraints` (required state, timeout, safety interlocks, etc.)
+
+---
+
+## F.7 Reference Harness Architecture (Recommended)
+
+Reference implementations SHOULD be structured as a small harness with clear seams.
+
+### F.7.1 Recommended Components
+
+- **L1 Simulator(s):** deterministic device and sensor simulators (seedable)
+- **L3 Orchestrator Stub:** minimal scheduler / state machine / dispatcher
+- **L2 HMI Stub:** constrained UI surfaces with action rails (confirm/abort/escalate)
+- **Event Bus (Optional):** in-memory or lightweight broker
+- **Event Log:** append-only record of message envelopes (for replay/testing)
+- **Test Runner:** executes scripted scenarios and checks assertions
+
+### F.7.2 Required Test Properties (Recommended)
+
+- **Determinism:** repeatable scenarios using fixed seeds
+- **Replayability:** ability to replay event logs and reproduce outcomes
+- **Observability:** structured logs with correlation IDs
+- **Failure injection:** at least one fault scenario (timeouts, invalid state, operator abort)
+
+---
+
+## F.8 Versioning and Lifecycle Guidelines
+
+### F.8.1 Interface Versioning
+
+- Interface identifiers SHOULD embed major version: `*.v1`, `*.v2`
+- Backward compatible changes SHOULD increment minor versions (if used)
+- Breaking changes SHOULD create a new interface ID or major version
+
+### F.8.2 Experimental Interfaces
+
+- Experimental interfaces MUST be clearly labeled (example: `*.exp.v1`)
+- Experimental interfaces MUST include migration notes (even if brief)
+
+### F.8.3 Deprecation
+
+- Interfaces SHOULD specify a deprecation window and replacement interface
+- Reference implementations SHOULD keep at least one scenario demonstrating migration
+
+---
+
+## F.9 Conformance Position (Non-Normative)
+
+This annex does not define formal conformance requirements. However, reference artifacts SHOULD include:
+
+- A statement of which interface IDs are exercised
+- A list of scenarios and expected outcomes
+- A machine-readable event log output for each scenario
+- A mapping of scenarios to layers (L1/L2/L3)
+
+---
+
+## F.10 Publication and Governance Gate
+
+Because reference implementations can prematurely “lock in” assumptions, publication SHOULD occur only after:
+
+1. **At least two independent implementations exist** OR one implementation plus an independent review
+2. Interfaces have documented semantics (not only field lists)
+3. Governance review confirms the implementation is non-normative and vendor-neutral
+4. The artifacts clearly state: “This proves interface viability; it is not a production reference stack.”
+
+---
+
+## F.11 What This Annex Enables (and What It Prevents)
+
+### Enables
+
+- Fast, low-risk pilot demonstrations
+- Early ecosystem tooling (schemas, simulators, harnesses)
+- Clear interface discussions without vendor lock-in
+- Repeatable validation for adopters and reviewers
+
+### Prevents
+
+- Premature standard capture by a single reference codebase
+- “Accidental productization” of UCPIS
+- Security or safety mandates creeping in informally
+
+---
+
+## F.12 Appendix — Glossary
+
+- **UCPIS:** Universal Cyber-Physical Interoperability Stack
+- **Reference Architecture:** the canonical layer model and interface-first approach
+- **MVUE:** Minimum Viable UCPIS-Executable (smallest runnable proof)
+- **Interface Contract:** field requirements + semantics + versioning identity
+- **Harness:** minimal environment used to execute and test scenarios
+
+---
+**End of Annex F**
