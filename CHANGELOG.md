@@ -1,19 +1,28 @@
-# Changelog
+# Changelog — UCPIS
 
-All notable changes to the Universal Cyber-Physical Interoperability Stack (UCPIS)
-are documented in this file.
+All notable changes to this project are documented here.
 
 ---
 
-## [v1.3] — Human Autonomy Integration
+## v1.4 — Public White Paper Release
+
+**Status:** Stable (Informative)
 
 ### Added
-- Formal Human Autonomy Classes (Class-L, Class-M, Class-H)
-- Informational Class-X designation (non-normative)
-- Explicit human-to-layer integration model
-- Human-in-the-loop failure mode analysis by class
+- Annex F — Reference Implementation Guidelines (non-normative)
+- Annex G — Governance Models (intentional deferral)
+- Annex H — Interoperability Profiles (intentional deferral)
 
-### Notes
-- No governance models introduced
-- No normative security controls added
-- Class-X remains explicitly deferred
+### Clarified
+- UCPIS posture as non-normative and non-enforcing
+- MVUE defined as conceptual only
+- Human autonomy classes treated as informational constraints
+
+### Confirmed
+- No normative security controls
+- No compliance, certification, or enforcement language
+- No product, platform, or implementation claims
+
+---
+
+No earlier versions are considered public or canonical.
