@@ -1,5 +1,142 @@
 # Universal Cyber-Physical Interoperability Stack (UCPIS)
-## Public Reference Architecture v1.3
+## Public White Paper — Version 1.4
+
+**Status:** Informative, Non-Normative  
+**License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+---
+
+## Attribution
+
+**Inventor:** Michael James Malecek  
+**Year of Origin:** 2026  
+**Location:** Delano, Minnesota, United States  
+**Canonical Repository:** https://github.com/ucpis2026us/ucpis  
+**Contact:** ucpis2026@gmail.com  
+
+---
+
+## Abstract
+
+The Universal Cyber-Physical Interoperability Stack (UCPIS) is an
+informative architectural framework describing how heterogeneous
+cyber-physical systems may interoperate through a layered,
+interface-first model.
+
+UCPIS is not a product, platform, standard, or implementation.
+It defines no compliance requirements, certifications, enforcement
+mechanisms, or normative security controls.
+
+---
+
+## 1. Purpose
+
+UCPIS exists to:
+
+- Reduce fragmentation across cyber-physical systems
+- Enable interface-first reasoning across physical, human, and cyber layers
+- Treat real-world constraints (energy, labor, safety, governance, biology)
+  as first-class architectural inputs
+
+---
+
+## 2. Scope and Non-Goals
+
+### In Scope
+- Conceptual architecture
+- Interface categorization
+- Human participation constraints
+- Informative threat and resilience framing
+- Non-normative reference guidance
+
+### Out of Scope
+- Product specifications
+- Implementation requirements
+- Security mandates
+- Compliance, certification, or enforcement
+- Performance guarantees or timelines
+
+---
+
+## 3. Architectural Overview
+
+UCPIS describes a **three-layer, interface-first architecture**:
+
+### Layer 1 — Physical
+Machines, robots, sensors, actuators, energy systems, and logistics assets.
+
+### Layer 2 — Human Interface / Mediation
+Constrained HMIs, guided workflows, confirmation and escalation surfaces.
+
+### Layer 3 — Cyber / Control / Governance
+Orchestration, scheduling, policy, audit, and coordination logic.
+
+Interfaces—not implementations—are the primary unit of interoperability.
+
+---
+
+## 4. Constraints as First-Class Inputs
+
+UCPIS treats constraints as architectural inputs, including:
+
+- Energy availability
+- Labor capability and autonomy
+- Safety boundaries
+- Governance and policy limits
+- Biological constraints (human or non-human)
+
+Constraints shape interfaces rather than being handled as exceptions.
+
+---
+
+## 5. Human Autonomy Classes (Informational)
+
+UCPIS describes human participation using informational classes:
+
+- **Class-L:** Low-Autonomy Operators  
+- **Class-M:** Mid-Autonomy Technicians / Supervisors  
+- **Class-H:** High-Autonomy Architects / Leaders  
+- **Class-X:** Exceptional or augmented autonomy (informational only)
+
+These classes constrain interface exposure; they do not assign value,
+authority, or status.
+
+---
+
+## 6. Minimum Viable UCPIS-Executable (MVUE)
+
+MVUE is a **conceptual definition only**.
+
+It describes the smallest executable artifact capable of exercising
+UCPIS interfaces across layers for demonstration or testing purposes.
+UCPIS v1.4 does not define or require any executable artifacts.
+
+---
+
+## 7. Annex Structure
+
+This white paper is complemented by the following annexes:
+
+- **Annex A:** Definitions & Terminology  
+- **Annex B:** Reference Architecture  
+- **Annex C:** Reference Architecture Diagrams  
+- **Annex D:** Threat Model & Resilience (Informative)  
+- **Annex E:** Standards Alignment & Mapping  
+- **Annex F:** Reference Implementation Guidelines (Informative; deferred in effect)  
+- **Annex G:** Governance Models (Authored deferral)  
+- **Annex H:** Interoperability Profiles (Authored deferral)
+
+---
+
+## 8. Status
+
+UCPIS v1.4 represents a **stable, public, informational release**.
+Future versions may evolve only through explicit revision.
+
+---
+
+**End of White Paper v1.4**
+
 
 ### Executive Summary
 
@@ -86,19 +223,3 @@ A unified cyber-physical architecture supports:
 - Energy-aware AI deployment
 - Secure and adaptable supply chains
 - Long-term infrastructure coherence
-
-### Annexes
-
-Supporting material is provided in non-normative annexes A–E.
-
-### Attribution & Public Record
-
-Michael James Malecek, born 1979 in Minnesota, United States, is the
-inventor of the Universal Cyber-Physical Interoperability Stack (UCPIS),
-developed in 2026.
-
-The canonical repository for this work is hosted at:
-https://github.com/ucpis2026us
-
-Correspondence may be directed to:
-ucpis2026@gmail.com
