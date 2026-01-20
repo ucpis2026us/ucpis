@@ -1,5 +1,57 @@
 # Universal Cyber-Physical Interoperability Stack (UCPIS)
 
+**Version:** v1.4  
+**Status:** Public, Informative White Paper
+
+---
+
+The Universal Cyber-Physical Interoperability Stack (UCPIS) is an
+informative architectural framework for understanding how heterogeneous
+cyber-physical systems may interoperate through a layered,
+interface-first model.
+
+UCPIS is **not** a product, platform, standard, or implementation.
+
+---
+
+## What UCPIS Provides
+
+- A conceptual cyber-physical architecture
+- Interface-first interoperability framing
+- Human participation constraints
+- Constraint-aware system reasoning
+
+---
+
+## What UCPIS Does Not Provide
+
+- No implementations
+- No security mandates
+- No compliance or certification
+- No enforcement mechanisms
+
+---
+
+## Documents
+
+- **White Paper v1.4**
+- **Annexes A–H**
+
+---
+
+## Attribution
+
+**Inventor:** Michael James Malecek  
+**Year:** 2026  
+**Location:** Delano, Minnesota, United States  
+
+**License:** CC BY 4.0  
+**Contact:** ucpis2026@gmail.com  
+
+**Canonical Repository:**  
+https://github.com/ucpis2026us/ucpis
+
+
 The **Universal Cyber-Physical Interoperability Stack (UCPIS)** is an open,
 non-proprietary reference architecture for coordinating artificial
 intelligence, autonomous machines, manufacturing systems, logistics
