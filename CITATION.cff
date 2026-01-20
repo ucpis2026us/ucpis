@@ -1,23 +1,11 @@
 cff-version: 1.2.0
-message: "If you use or reference this work, please cite it as below."
-title: "Universal Cyber-Physical Interoperability Stack (UCPIS): Public White Paper v1.3"
-type: report
+title: "Universal Cyber-Physical Interoperability Stack (UCPIS)"
+version: "1.4"
+year: 2026
 authors:
   - family-names: Malecek
     given-names: Michael James
-    email: ucpis2026@gmail.com
-    identifiers:
-      - type: url
-        value: https://github.com/ucpis2026us
-      - type: url
-        value: https://www.linkedin.com/in/michaeljamesmalecek/
-year: 2026
-version: "1.3"
-license: "CC-BY-4.0"
+license: CC-BY-4.0
 repository-code: "https://github.com/ucpis2026us/ucpis"
-keywords:
-  - cyber-physical systems
-  - interoperability
-  - industrial automation
-  - reference architecture
-  - open standards
+contact:
+  - email: ucpis2026@gmail.com
