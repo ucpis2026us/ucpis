@@ -57,9 +57,7 @@ These principles originate outside the industrial standards ecosystem and serve 
 
 ### E.2.1 Constitutional Alignment (Conceptual)
 
-UCPIS architecture reflects the following high-level principles derived from the
-:contentReference[oaicite:2]{index=2}
-and the :contentReference[oaicite:3]{index=3}:
+UCPIS architecture reflects the following high-level principles derived from the Constitution of the United States
 
 | Constitutional Principle | UCPIS Architectural Reflection |
 |--------------------------|--------------------------------|
