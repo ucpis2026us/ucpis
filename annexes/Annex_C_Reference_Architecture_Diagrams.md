@@ -1,5 +1,20 @@
 # Annex C — Reference Architecture
 
+**Status:** Informative / Non-Normative  
+**UCPIS Version:** v1.4  
+**License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+**Attribution Required:**  
+Michael James Malecek (2026)
+
+**Canonical Repository:**  
+https://github.com/ucpis2026us
+
+**Contact:**  
+ucpis2026@gmail.com
+
+---
+
 This annex describes the reference architecture for the Universal Cyber-Physical
 Interoperability Stack (UCPIS), including system layers, interfaces, and integration
 principles. It is technology-agnostic and intended to guide implementation without
