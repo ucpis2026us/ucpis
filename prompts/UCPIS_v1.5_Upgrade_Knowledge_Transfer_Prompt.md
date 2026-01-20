@@ -51,8 +51,7 @@ documentation corpus, including:
 - README.md, index.md, repository-structure.md  
 - CHANGELOG.md and RELEASE_NOTES.md  
 
-All materials are harmonized to UCPIS v1.4.  
-LinkedIn references have been removed.  
+All materials are harmonized to UCPIS v1.4.
 Posture is stable and institution-safe.
 
 ---
