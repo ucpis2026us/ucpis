@@ -34,6 +34,13 @@ This annex covers:
 - Example **interface categories** and illustrative message-field conventions
 - Versioning and lifecycle guidelines for interfaces and artifacts
 - Publication gating: when and how reference code should be released
+- 
+- Reference implementations MAY include environmental or biological interaction
+signals (e.g., presence detection, exclusion zone events) as external inputs.
+
+Such inputs are treated as non-agent environmental conditions, consistent with
+Annex A.13 and Annex C, and do not imply authority, intent, or accountability.
+
 
 This annex does **not** cover:
 
@@ -51,6 +58,11 @@ UCPIS reference implementations must reflect the canonical UCPIS stack model:
 - **Layer 1 — Physical:** machines, robots, sensors, actuators, energy/logistics interfaces
 - **Layer 2 — Human Interface / Mediation:** constrained HMIs, guided flows, task confirmation surfaces
 - **Layer 3 — Cyber / Control / Governance:** orchestration, policy, scheduling, audit, coordination logic
+
+Reference implementations SHOULD reflect that UCPIS systems operate within a broader
+environmental context. Non-human biological entities and environmental conditions,
+where modeled, are treated as external, non-deterministic inputs rather than actors
+or participants in control logic.
 
 ### F.2.1 Human-Class–Aware Interface Binding
 
@@ -87,6 +99,10 @@ An artifact qualifies as MVUE if it:
 - **MVUE-A:** Simulated device (L1) + orchestrator (L3) + event log replay
 - **MVUE-B:** Task assignment (L3→L2) + Class-L constrained acknowledgement (L2→L3)
 - **MVUE-C:** Multi-cell orchestration mock (L3↔L3) demonstrating policy propagation
+- **MVUE-D (Optional):** Environmental interaction mock (e.g., simulated presence
+  event) triggering a safe-state transition or task pause, demonstrating that
+  biological or environmental signals influence system behavior without introducing
+  agency or authority.
 
 ---
 
