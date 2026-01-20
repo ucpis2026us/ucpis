@@ -1,6 +1,9 @@
-# Governance Without Capture
+# Governance Statement
 
-This document outlines principles for stewarding open cyber-physical
-architecture without platform control or vendor capture.
+UCPIS asserts **no governance authority**.
 
-Governance is transparent, non-exclusive, and non-proprietary.
+Governance is treated as a downstream concern, activated only if and
+when multiple independent stakeholders adopt or steward the framework.
+
+See **Annex G — Governance Models** for criteria governing any future
+discussion of stewardship.
