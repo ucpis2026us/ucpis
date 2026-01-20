@@ -1,5 +1,20 @@
 # Annex A — Definitions, Terminology, and Taxonomy
 
+**Status:** Informative / Non-Normative  
+**UCPIS Version:** v1.4  
+**License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+**Attribution Required:**  
+Michael James Malecek (2026)
+
+**Canonical Repository:**  
+https://github.com/ucpis2026us
+
+**Contact:**  
+ucpis2026@gmail.com
+
+---
+
 This annex defines canonical terms, classifications, and concepts used throughout the **Universal Cyber-Physical Interoperability Stack (UCPIS)**.
 
 Unless explicitly stated otherwise, definitions in this annex are **normative**.  
