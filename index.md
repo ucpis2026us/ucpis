@@ -100,7 +100,7 @@ conformance claims are published.
 ### UCPIS White Paper
 
 - **Universal Cyber-Physical Interoperability Stack (UCPIS): Public White Paper v1.4**  
-  https://github.com/ucpis2026us/ucpis/blob/main/whitepaper/UCPIS-White-Paper-v1.4.md
+  https://github.com/ucpis2026us/ucpis/white-paper/UCPIS_White_Paper_v1.4.md
 
 ### Supporting Annexes (Informative / Non-Normative)
 
