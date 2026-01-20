@@ -30,6 +30,22 @@ Sections explicitly marked *Informational* are non-normative and provided for cl
 
 ---
 
+## A.2 Agent-Agnostic Interface Principle (Normative)
+
+UCPIS defines interfaces in an agent-agnostic manner, meaning interface contracts
+do not assume the internal nature, cognition, or origin of the interacting entity.
+
+Agent-agnostic interfaces specify only observable interaction boundaries,
+constraints, and permitted actions.
+
+This principle does not imply agent equivalence.
+
+Authority, accountability, normative responsibility, and governance are assigned
+explicitly through actor classification, policy, and system control layers, and
+are not inferred from interface access alone.
+
+---
+
 ## A.12 Human Autonomy Classes
 
 UCPIS models human participants as **first-class system actors**. Human Autonomy Classes are descriptive constructs used to inform interface design, authority boundaries, and safety assumptions across the stack.
