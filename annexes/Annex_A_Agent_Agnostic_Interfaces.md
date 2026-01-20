@@ -112,7 +112,46 @@ Class-X is informational only in UCPIS v1.4. No normative requirements, interfac
 
 ---
 
-## A.13 Non-Human Biological Actors *(Informational)*
+## A.13 Constrained Human–Machine Interfaces (HMIs)
+
+**Definition (Normative)**  
+A **Constrained HMI** is a class-scoped, safety-bounded interaction surface through which human actors participate in cyber-physical systems. Constrained HMIs expose only those actions, affordances, and state representations that a given human class MAY safely execute or interpret.
+
+**Purpose**  
+Constrained HMIs exist to ensure that authority, safety, and accountability are enforced at the interface boundary. This prevents mismatches between human cognitive capacity and cyber-physical system control surfaces.
+
+**Scope**
+Constrained HMIs SHALL:
+- Bind interaction to **actor class**
+- Enforce **authority limits**
+- Reflect **system state and lockouts**
+- Emit **audit traces**
+- Support **escalation mechanisms**
+
+Constrained HMIs SHALL NOT:
+- Assume arbitrary free-form human control
+- Provide unbounded override capabilities
+- Infer competence or authority from job title, role, or seniority
+
+**Class Binding Rules**
+- **Class-L** interfaces SHALL expose only structured, reversible, and bounded tasks
+- **Class-M** interfaces MAY expose limited diagnostic and supervisory actions within SOP-defined boundaries
+- **Class-H** interfaces MAY expose structural configuration, policy, and architectural control
+- **Class-X** interfaces are informational only in v1.4 and SHALL NOT define normative requirements
+
+**Safety Envelope**
+All Constrained HMIs SHALL respect cyber-physical safety envelopes including:
+- irreversible actions
+- timing and latency constraints
+- electrical and thermal limits
+- compliance, audit, or certification regimes
+
+**Design Implication**
+> Giving a human actor more interface authority than they can safely exercise is a system design failure, not a usability failure.
+
+---
+
+## A.14 Non-Human Biological Actors *(Informational)*
 
 UCPIS may interface indirectly or directly with non-human biological entities in certain cyber-physical environments, including but not limited to agriculture, research facilities, environmental monitoring, logistics perimeters, or containment systems.
 
@@ -131,7 +170,7 @@ This category includes animals with varying cognitive and behavioral complexity,
 - Interaction mediated through observation, containment, or conditioned response mechanisms
 
 **Design Implications**
-- Interfaces involving non-human biological actors SHALL be treated as **environmental or biological interface constraints**, not as autonomous system agents.
+- Interfaces involving non-human biological actors SHALL be treated as **environmental or biological interface constraints**, not as autonomous system actors.
 - All decision authority, safety responsibility, and escalation logic remains assigned to human or artificial system actors.
 - Systems interacting with animals MUST assume non-symbolic intent, non-contractual behavior, and potential unpredictability.
 
