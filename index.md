@@ -131,7 +131,7 @@ only if and when multiple independent stakeholders adopt or steward the
 architecture.
 
 See:
-- **https://github.com/ucpis2026us/ucpis/blob/main/Governance_Without_Capture.md — Governance Without Capture**
+- **[Governance Without Capture](https://github.com/ucpis2026us/ucpis/blob/main/Governance_Without_Capture.md)**
 - **[Annex G](https://github.com/ucpis2026us/ucpis/blob/main/annexes/Annex_G_Governance_Models.md) — Governance Models (Deferred)**
 
 ---
