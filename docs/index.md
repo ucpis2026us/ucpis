@@ -74,8 +74,8 @@ interoperability, modular substitution, and constraint-aware coordination.
 ## Canonical Documents
 
 ### UCPIS White Paper
-- **Universal Cyber-Physical Interoperability Stack (UCPIS): Public White Paper v1.3**  
-  https://github.com/ucpis2026us/ucpis/blob/main/white-paper/UCPIS_White_Paper_v1.3.md
+- **Universal Cyber-Physical Interoperability Stack (UCPIS): Public White Paper v1.4**  
+  https://github.com/ucpis2026us/ucpis/blob/main/white-paper/UCPIS_White_Paper_v1.4.md
 
 ### Supporting Annexes (Informative)
 - Annex A — Agent-Agnostic Interfaces & Human Autonomy Profiles  
