@@ -1,7 +1,7 @@
 # Universal Cyber-Physical Interoperability Stack (UCPIS)
 ## Public White Paper — Version 1.4
 
-**Status:** Informative, Non-Normative  
+**Status:** Informative / Non-Normative  
 **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 ---
@@ -12,20 +12,25 @@
 **Year of Origin:** 2026  
 **Location:** Delano, Minnesota, United States  
 **Canonical Repository:** https://github.com/ucpis2026us/ucpis  
-**Contact:** ucpis2026@gmail.com  
+**Contact:** ucpis2026@gmail.com
 
 ---
 
-## Abstract
+## Executive Summary
 
-The Universal Cyber-Physical Interoperability Stack (UCPIS) is an
-informative architectural framework describing how heterogeneous
-cyber-physical systems may interoperate through a layered,
-interface-first model.
+The **Universal Cyber-Physical Interoperability Stack (UCPIS)** is an
+informative reference architecture describing how heterogeneous
+cyber-physical systems may interoperate through a **layered,
+interface-first model**.
 
-UCPIS is not a product, platform, standard, or implementation.
-It defines no compliance requirements, certifications, enforcement
-mechanisms, or normative security controls.
+UCPIS is not a product, platform, standard, or implementation. It defines
+**no compliance requirements**, **no certifications**, and **no normative
+security controls**.
+
+The architecture integrates **physical systems, human participation,
+automation, governance constraints, and environmental context** into a
+coherent interoperability framework suitable for public infrastructure,
+industrial systems, and long-lived national capabilities.
 
 ---
 
@@ -34,25 +39,26 @@ mechanisms, or normative security controls.
 UCPIS exists to:
 
 - Reduce fragmentation across cyber-physical systems
-- Enable interface-first reasoning across physical, human, and cyber layers
-- Treat real-world constraints (energy, labor, safety, governance, biology)
-  as first-class architectural inputs
+- Enable interface-first reasoning across physical, human, and cyber domains
+- Treat real-world constraints (energy, labor, safety, governance, environment)
+  as **first-class architectural inputs**
+- Support resilience through structural design rather than ad hoc mitigation
 
 ---
 
 ## 2. Scope and Non-Goals
 
 ### In Scope
-- Conceptual architecture
-- Interface categorization
-- Human participation constraints
-- Informative threat and resilience framing
-- Non-normative reference guidance
+- Conceptual reference architecture
+- Interface-first interoperability framing
+- Human participation constraints (by reference)
+- Environmental and biological context
+- Informative threat and resilience principles
 
 ### Out of Scope
-- Product specifications
-- Implementation requirements
-- Security mandates
+- Product specifications or vendor guidance
+- Implementation requirements or roadmaps
+- Security controls, profiles, or mandates
 - Compliance, certification, or enforcement
 - Performance guarantees or timelines
 
@@ -60,166 +66,139 @@ UCPIS exists to:
 
 ## 3. Architectural Overview
 
-UCPIS describes a **three-layer, interface-first architecture**:
+UCPIS defines a **three-layer conceptual architecture**, operating within a
+broader environmental and socio-technical context.
 
 ### Layer 1 — Physical
 Machines, robots, sensors, actuators, energy systems, and logistics assets.
 
 ### Layer 2 — Human Interface / Mediation
-Constrained HMIs, guided workflows, confirmation and escalation surfaces.
+Constrained human–machine interfaces, guided workflows, confirmation,
+escalation, and exception handling.
 
 ### Layer 3 — Cyber / Control / Governance
-Orchestration, scheduling, policy, audit, and coordination logic.
+Orchestration, scheduling, policy definition, audit, coordination, and
+system-level oversight.
 
-Interfaces—not implementations—are the primary unit of interoperability.
-
----
-
-## 4. Constraints as First-Class Inputs
-
-UCPIS treats constraints as architectural inputs, including:
-
-- Energy availability
-- Labor capability and autonomy
-- Safety boundaries
-- Governance and policy limits
-- Biological constraints (human or non-human)
-
-Constraints shape interfaces rather than being handled as exceptions.
+Interfaces — not implementations — are the primary unit of interoperability.
 
 ---
 
-## 5. Human Autonomy Classes (Informational)
+## 4. Constraints as First-Class Architectural Inputs
 
-UCPIS describes human participation using informational classes:
+UCPIS treats constraints as shaping forces on interface design, including:
 
-- **Class-L:** Low-Autonomy Operators  
-- **Class-M:** Mid-Autonomy Technicians / Supervisors  
-- **Class-H:** High-Autonomy Architects / Leaders  
-- **Class-X:** Exceptional or augmented autonomy (informational only)
+- Energy availability and electrical load
+- Human labor capability and autonomy
+- Safety boundaries and hazard containment
+- Governance, legitimacy, and auditability
+- Environmental and biological context
 
-These classes constrain interface exposure; they do not assign value,
-authority, or status.
-
----
-
-## 6. Minimum Viable UCPIS-Executable (MVUE)
-
-MVUE is a **conceptual definition only**.
-
-It describes the smallest executable artifact capable of exercising
-UCPIS interfaces across layers for demonstration or testing purposes.
-UCPIS v1.4 does not define or require any executable artifacts.
+Constraints are integrated structurally rather than handled as exceptions.
 
 ---
 
-## 7. Annex Structure
+## 5. Human Participation Model (By Reference)
 
-This white paper is complemented by the following annexes:
+UCPIS models human participation through **Human Autonomy Classes**, defined
+in **Annex A — Definitions, Terminology, and Taxonomy**.
 
-- **Annex A:** Definitions & Terminology  
-- **Annex B:** Reference Architecture  
-- **Annex C:** Reference Architecture Diagrams  
-- **Annex D:** Threat Model & Resilience (Informative)  
+These classes:
+- Are functional and contextual
+- Constrain interface exposure and authority
+- Do not assign value, status, or worth
+
+Detailed class definitions are intentionally excluded from this document.
+
+---
+
+## 6. Environmental and Biological Context
+
+UCPIS explicitly acknowledges that cyber-physical systems operate in
+real-world environments that may include **non-human biological entities**
+(e.g., wildlife).
+
+Such entities:
+- Are not system agents or authorities
+- Are not governance participants
+- Influence safety, resilience, and design constraints
+
+Environmental and biological interaction is treated as **context**, not agency.
+
+---
+
+## 7. Minimum Viable UCPIS-Executable (MVUE)
+
+The **Minimum Viable UCPIS-Executable (MVUE)** is a conceptual definition
+describing the smallest executable artifact capable of exercising UCPIS
+interfaces across layers.
+
+MVUEs:
+- Demonstrate interface viability
+- Enable testing and replay
+- Do not constitute implementations or reference systems
+
+UCPIS v1.4 defines **no executable artifacts**.
+
+---
+
+## 8. Interoperability as the Core Contribution
+
+Interoperability within UCPIS is defined by:
+
+- Interface-level substitution
+- Event-based coordination
+- Cross-domain composability
+- Graceful degradation under constraint
+
+Interoperability is architectural, not contractual.
+
+---
+
+## 9. Threat Model and Resilience (By Reference)
+
+UCPIS treats human variability, automation failure, and environmental
+interaction as **expected operating conditions**, not exceptional faults.
+
+Threat modeling and resilience principles are defined in **Annex D**.
+
+No normative security controls are defined.
+
+---
+
+## 10. Governance Position
+
+UCPIS asserts **no governance authority**.
+
+Governance is treated as a downstream, conditional concern, activated only
+if and when multiple independent stakeholders adopt or steward the
+architecture.
+
+This posture is defined in **Annex G** and the governance-without-capture
+statement.
+
+---
+
+## 11. Annex Structure
+
+This white paper is complemented by the following non-normative annexes:
+
+- **Annex A:** Definitions, Terminology, and Taxonomy  
+- **Annex B:** Interfaces & Data Model  
+- **Annex C:** Reference Architecture  
+- **Annex D:** Threat Model & Resilience  
 - **Annex E:** Standards Alignment & Mapping  
-- **Annex F:** Reference Implementation Guidelines (Informative; deferred in effect)  
-- **Annex G:** Governance Models (Authored deferral)  
-- **Annex H:** Interoperability Profiles (Authored deferral)
+- **Annex F:** Reference Implementation Guidelines *(Deferred)*  
+- **Annex G:** Governance Models *(Deferred)*  
+- **Annex H:** Interoperability Profiles *(Deferred)*
 
 ---
 
-## 8. Status
+## 12. Status
 
 UCPIS v1.4 represents a **stable, public, informational release**.
-Future versions may evolve only through explicit revision.
+Future revisions will occur only through explicit versioned updates.
 
 ---
 
 **End of White Paper v1.4**
-
-
-### Executive Summary
-
-The Universal Cyber-Physical Interoperability Stack (UCPIS) is a formulated
-reference architecture for interoperable cyber-physical systems. It
-provides a unified architectural framework for coordinating autonomous
-manufacturing, robotics, logistics, energy systems, artificial
-intelligence, and human governance.
-
-UCPIS is not a product, platform, or implementation. It defines a layered,
-interface-first architectural model intended to support future standards,
-reference implementations, and institutional stewardship.
-
-### Problem Statement
-
-Modern industrial and cyber-physical systems remain fragmented across
-vendors, domains, and control paradigms. Automation stacks, robotics
-ecosystems, energy planning, logistics coordination, and human governance
-are often treated as separate concerns, resulting in brittle systems and
-limited adaptability.
-
-This fragmentation represents an interoperability failure at the
-civilizational infrastructure level.
-
-### Architectural Philosophy
-
-UCPIS is designed as:
-
-- A layered cyber-physical architecture
-- Interface-first and modular by design
-- Constraint-aware, integrating energy, labor, governance, and safety
-- Scalable from small facilities to megafactories and beyond
-
-UCPIS is a present-day architectural formulation, not a prediction of
-future technology.
-
-### The UCPIS Layered Stack (Conceptual)
-
-- Physical Production & Actuation Layer
-- Robotics & Automation Control Layer
-- Cyber-Physical Interface Layer
-- Logistics & Material Flow Layer
-- Energy & Load Coordination Layer
-- Human Oversight & Labor Interface Layer
-- Governance, Compliance & Audit Layer
-
-Each layer exposes interfaces rather than implementations.
-
-### Interoperability as Core Contribution
-
-Interoperability within UCPIS is defined by:
-
-- Standardized event exchange
-- Modular substitution of components
-- Cross-domain coordination
-- Resilience under degraded conditions
-
-### Constraint-Integrated Design
-
-UCPIS treats constraints as first-class architectural inputs, including:
-
-- Energy limits and electrical load
-- Human labor laws and safety
-- Governance, auditability, and legitimacy
-- Resilience and threat awareness
-
-UCPIS does not define normative security controls or compliance requirements.
-
-### Maturity and Roadmap
-
-UCPIS currently exists as:
-
-- A formulated architectural stack
-- A reference model for interoperability
-- A systems-level design language
-
-Future work may include reference implementations and standards alignment.
-
-### Strategic Significance
-
-A unified cyber-physical architecture supports:
-
-- Industrial resilience
-- Energy-aware AI deployment
-- Secure and adaptable supply chains
-- Long-term infrastructure coherence
