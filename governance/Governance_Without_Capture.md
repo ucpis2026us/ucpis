@@ -48,4 +48,26 @@ Human dignity and responsibility remain foundational.
 
 ## Environmental and Biological Context
 
-UCPI
+UCPIS architectures may operate in environments that include non-human
+biological entities (e.g., wildlife), as described in Annex A.13 and Annex C.
+
+Such entities:
+- Are not governance participants
+- Are not stakeholders or representatives
+- Do not confer authority or obligation
+
+Their presence informs **design constraints and resilience**, not governance.
+
+---
+
+## Relationship to Annex G
+
+Criteria governing any future discussion of stewardship or governance models
+are defined in **Annex G — Governance Models**.
+
+Until those criteria are met, this statement remains the authoritative position:
+**UCPIS operates without governance.**
+
+---
+
+### End of Governance Statement
