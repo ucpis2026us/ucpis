@@ -2,7 +2,18 @@
 
 **Status:** Informative / Non-Normative  
 **UCPIS Version:** v1.4  
+**License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
 
+**Attribution Required:**  
+Michael James Malecek (2026)
+
+**Canonical Repository:**  
+https://github.com/ucpis2026us
+
+**Contact:**  
+ucpis2026@gmail.com
+
+---
 This annex documents conceptual alignment between the Universal Cyber-Physical
 Interoperability Stack (UCPIS) and existing bodies of law, standards, and technical
 frameworks.
