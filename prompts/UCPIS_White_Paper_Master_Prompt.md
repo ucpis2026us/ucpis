@@ -80,8 +80,7 @@ All documents must consistently reflect:
 - **Project Contact:** ucpis2026@gmail.com  
 - **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
 
-LinkedIn may appear **only** as an author identifier in `CITATION.cff`,
-not in the white paper body or annexes.
+No social media platforms or profiles are to be referenced in any document.
 
 ---
 
@@ -186,7 +185,6 @@ Reference **Annex A** instead.
 ### CITATION.cff
 - GitHub repository as source of record
 - Author name and email
-- GitHub and LinkedIn identifiers
 - License: CC BY 4.0
 
 ---
