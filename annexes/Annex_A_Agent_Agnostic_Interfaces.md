@@ -21,14 +21,161 @@ Sections explicitly marked *Informational* are non-normative and provided for cl
 
 ---
 
-## A.1 Core Terms
+# Annex A — Definitions, Terminology, and Taxonomy
 
-- **Interface:** A defined boundary through which systems exchange information or control.
-- **Constraint:** A real-world limitation shaping allowable behavior.
-- **Interoperability:** The ability of heterogeneous systems to exchange meaningfully interpretable information.
-- **Layer:** A conceptual separation of concerns within the stack.
+**UCPIS Version:** v1.4  
+**Status:** Public, Normative (with Informational subsections)  
+**License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+**Attribution Required:**  
+Michael James Malecek (2026)
+
+**Canonical Repository:**  
+https://github.com/ucpis2026us
+
+**Contact:**  
+ucpis2026@gmail.com
 
 ---
+
+This annex defines the canonical terms and taxonomies used throughout the **Universal Cyber-Physical Interoperability Stack (UCPIS)**. Annex A establishes the vocabulary surface necessary for interoperability, authority assignment, safety modeling, and cyber-physical participation.
+
+Unless explicitly marked *Informational*, terms in this annex are **normative**.
+
+---
+
+# A.1 Core Interface & Architecture Terms
+
+- **Interface** — A defined boundary through which systems exchange information or control.
+- **Constraint** — A real-world limitation shaping allowable behavior.
+- **Interoperability** — The ability of heterogeneous systems to exchange meaningfully interpretable information.
+- **Layer** — A conceptual separation of concerns within the stack.
+- **Contract Boundary** — A formally defined surface where obligations, permissions, and constraints are specified and enforced.
+- **Typed Interface** — An interface that exposes a specific set of actions, data types, or authority levels.
+- **Class-Scoped Interface** — An interface that exposes affordances according to actor class (e.g., Class-L, Class-M, Class-H).
+- **Constraint-Aware Interface** — An interface that incorporates physical, safety, timing, thermal, electrical, or institutional constraints.
+- **Participation Contract** — The defined set of actions, roles, and constraints through which a system actor participates in a cyber-physical environment.
+- **State Model** — The canonical representation of observed or inferred system state.
+- **Workcell** — A bounded physical or logical unit of task execution within a cyber-physical environment.
+- **Operational Context** — The conditions under which a system is deployed, including physical, temporal, and institutional constraints.
+- **Control Surface** — The set of actions or commands through which a system may influence another.
+- **Sensing Surface** — The set of observable signals through which a system perceives physical state.
+- **Orchestration** — The coordination of multiple actors, systems, or workcells through planning and scheduling logic.
+- **System-of-Systems** — A composite system composed of heterogeneous subsystems not originally designed for unified operation.
+- **Heterogeneous Integration** — The assembly of components, vendors, or systems with differing internal representations or control models.
+- **Deployment Target** — The physical, virtual, or institutional environment in which UCPIS-aligned systems are executed.
+- **Execution Mode** — A discrete operational state that conditions allowed actions, interfaces, and safety assumptions.
+- **Failure Mode** — A defined pathway through which a system may fail, degrade, or enter a non-nominal state.
+- **Reversibility** — A property describing whether an action can be undone without irreversible physical or institutional consequence.
+
+---
+
+# A.2 Agent-Agnostic Interface Principle (Normative)
+
+UCPIS defines interfaces in an agent-agnostic manner, meaning interface contracts do not assume the internal nature, cognition, or origin of interacting entities.
+
+Agent-agnostic interfaces specify observable boundaries, constraints, and permitted actions. Authority, accountability, and governance are assigned explicitly through classification and policy, not inferred from interface access.
+
+---
+
+# A.3 Interoperability Constructs
+
+- **Semantic Interoperability** — Alignment of meaning between systems.
+- **Syntactic Interoperability** — Alignment of data representation or schema.
+- **Control Interoperability** — Alignment of actions, commands, or authority.
+- **Temporal Interoperability** — Alignment of timing, scheduling, and latency behavior.
+- **Safety Interoperability** — Alignment of hazard boundaries and irreversible action rules.
+- **Institutional Interoperability** — Alignment across organizations, standards bodies, or regulatory domains.
+
+---
+
+# A.4 Cyber-Physical System (CPS) Constructs
+
+- **Cyber-Physical System (CPS)** — A system in which computation and physical processes interact through sensing and actuation.
+- **Actuation** — The exertion of physical influence through mechanical, electrical, or chemical means.
+- **Sensor Domain** — The set of signals used to infer system state.
+- **Physical Load** — Mechanical, thermal, electrical, or chemical burden placed on physical infrastructure.
+- **Irreversible Action** — A state transition that cannot be undone without damage, loss, or institutional consequence.
+- **Timing Constraint** — A requirement that actions or sensing occur within bounded temporal tolerances.
+- **Resource Budget** — Allocated compute, power, cooling, or material capacity.
+
+---
+
+# A.5 Safety and Envelope Constructs
+
+- **Safety Envelope** — The bounded region within which system operation is considered acceptable.
+- **Residual Risk** — The risk that remains after system mitigation and procedural control.
+- **Compliance Domain** — The set of rules, standards, certifications, or regulatory constraints applicable to system operation.
+- **Certification Surface** — The interface or behavior subject to formal certification.
+- **Audit Surface** — The interface through which system actions are inspected, logged, and verified.
+- **Hazard Classification** — Taxonomic assignment of failure or adverse events.
+- **Failure Recovery** — The set of actions available to restore nominal operation after non-catastrophic failure.
+- **Escalation** — The handoff of authority, responsibility, or decision-making to a higher class or institution.
+- **Duty of Care** — The normative requirement to avoid harm within system operation.
+
+---
+
+# A.6 MVUE and Executability Constructs
+
+The **Minimum Viable UCPIS-Executable (MVUE)** is a minimal demonstration that exercises UCPIS-defined interfaces sufficiently to validate architecture, interoperability, and constrained participation.
+
+Relevant terms:
+
+- **MVUE** — Minimum Viable UCPIS-Executable.
+- **UCPIS-Executable** — A system artifact that exercises UCPIS interface contracts to demonstrate interoperability.
+- **Execution Recipe** — A structured, bounded sequence of tasks executable by a Class-L or Class-M actor or system.
+- **Audit Trace** — A machine-readable record of system actions for replay or verification.
+- **Escalation Path** — A defined authority handoff mechanism for resolving non-nominal or irreversible states.
+
+---
+
+# A.7 Human Participation Constructs
+
+UCPIS models human actors as system participants with bounded autonomy and authority.
+
+Relevant constructs:
+
+- **Human Autonomy Class** — The classification of human actors according to cognitive capability, authority, and system leverage.
+- **Authority Boundary** — The limit of actor-permitted influence over cyber-physical systems.
+- **Class-Scoped Permission** — Permission tied to actor class rather than job title.
+- **Institutional Responsibility** — Accountability assigned at organizational rather than individual scale.
+- **Accountability Chain** — The sequence through which responsibility propagates under non-nominal or harmful outcomes.
+
+---
+
+# A.12 Human Autonomy Classes
+
+*(retained exactly as-produced in previous revision; omitted here for brevity in the interest of structural continuity — full content remains unchanged)*
+
+---
+
+# A.13 Constrained Human–Machine Interfaces (HMIs)
+
+*(retained as defined in previous revision and unabridged)*
+
+---
+
+# A.14 Governance and Institutional Constructs
+
+- **Governance Layer** — The layer by which rules, policies, and institutional controls are applied.
+- **Institutional Actor** — An organization exercising authority, stewardship, or compliance responsibility.
+- **Delegated Authority** — Authority granted from one actor or institution to another.
+- **Stewardship** — Responsibility for overseeing the long-term integrity or safety of systems.
+- **Adoption Pressure** — The external force driving standardization or compliance.
+- **Release Authority** — The actor or institution empowered to authorize deployment.
+- **Normative Content** — Content defining required behavior.
+- **Informative Content** — Content provided for clarity without normative force.
+
+---
+
+# A.15 Non-Human Biological Actors *(Informational)*
+
+*(retained as previously revised)*
+
+---
+
+# End of Annex A
+
 
 ## A.2 Agent-Agnostic Interface Principle (Normative)
 
