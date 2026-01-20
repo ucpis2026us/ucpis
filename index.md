@@ -100,7 +100,7 @@ conformance claims are published.
 ### UCPIS White Paper
 
 - **Universal Cyber-Physical Interoperability Stack (UCPIS): Public White Paper v1.4**  
-  https://github.com/ucpis2026us/ucpis/white-paper/UCPIS_White_Paper_v1.4.md
+  https://github.com/ucpis2026us/ucpis/tree/main/white-paper/UCPIS_White_Paper_v1.4.md
 
 ### Supporting Annexes (Informative / Non-Normative)
 
@@ -114,7 +114,7 @@ conformance claims are published.
 - **Annex H** — Interoperability Profiles *(Deferred)*  
 
 All annexes are available under:  
-https://github.com/ucpis2026us/ucpis/annexes
+https://github.com/ucpis2026us/ucpis/tree/main/annexes
 
 Deferred annexes are intentionally withheld to prevent premature
 standardization, governance capture, or implementation lock-in.
