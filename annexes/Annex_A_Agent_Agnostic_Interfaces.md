@@ -1,4 +1,15 @@
-# Annex A — Reference Definitions & Taxonomy
+# Annex A — Definitions Terminology Taxonomy
+
+This annex defines key terms used throughout UCPIS.
+
+- **Interface:** A defined boundary through which systems exchange
+  information or control.
+- **Constraint:** A real-world limitation shaping allowable behavior.
+- **Interoperability:** The ability of heterogeneous systems to exchange
+  meaningfully interpretable information.
+- **Layer:** A conceptual separation of concerns within the stack.
+
+All definitions are informational and non-normative.
 
 This annex defines canonical terms, classifications, and concepts used throughout
 the Universal Cyber-Physical Interoperability Stack (UCPIS). Definitions in this
