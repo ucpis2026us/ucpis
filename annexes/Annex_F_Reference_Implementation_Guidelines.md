@@ -47,13 +47,14 @@ This annex covers:
 - Example **interface categories** and illustrative message-field conventions
 - Versioning and lifecycle guidelines for interfaces and artifacts
 - Publication gating: when and how reference code should be released
-- 
-- Reference implementations MAY include environmental or biological interaction
+- Guidance for representing **Constrained HMIs** and **human-class–aware participation** in reference artifacts
+- Optional modeling of environmental and biological interaction signals as external, non-agent inputs
+
+Reference implementations MAY include environmental or biological interaction
 signals (e.g., presence detection, exclusion zone events) as external inputs.
 
 Such inputs are treated as non-agent environmental conditions, consistent with
-Annex A.13 and Annex C, and do not imply authority, intent, or accountability.
-
+Annex A (Non-Human Biological Actors), and do not imply authority, intent, or accountability.
 
 This annex does **not** cover:
 
@@ -69,7 +70,7 @@ This annex does **not** cover:
 UCPIS reference implementations must reflect the canonical UCPIS stack model:
 
 - **Layer 1 — Physical:** machines, robots, sensors, actuators, energy/logistics interfaces
-- **Layer 2 — Human Interface / Mediation:** constrained HMIs, guided flows, task confirmation surfaces
+- **Layer 2 — Human Interface / Mediation:** **Constrained HMIs**, guided flows, task confirmation surfaces
 - **Layer 3 — Cyber / Control / Governance:** orchestration, policy, scheduling, audit, coordination logic
 
 Reference implementations SHOULD reflect that UCPIS systems operate within a broader
@@ -86,6 +87,18 @@ UCPIS reference implementations must preserve the architecture’s human partici
 - **Class-H (High-Autonomy Architects / Leaders):** deep Layer 3 (policy, governance, architecture)
 
 Reference code should demonstrate that **interfaces are capability-scoped** and that **UI surfaces are constrained by class** (e.g., a Class-L HMI cannot expose unrestricted actuations).
+
+### F.2.2 Constrained HMI Representation in Reference Implementations
+
+Reference implementations that include human participation SHOULD:
+
+- Treat all Layer 2 surfaces as **Constrained HMIs** as defined in Annex A.
+- Explicitly bind HMI behaviors to a declared `human_class` (e.g., Class-L / Class-M / Class-H).
+- Demonstrate **rails and guardrails** for at least one Class-L scenario (confirm/abort/escalate only).
+- Avoid exposing free-form or unbounded control even in demonstration code.
+- Emit structured events for every human action (e.g., `confirm`, `abort`, `escalate`) to exercise auditability.
+
+Where possible, a single scenario SHOULD be implementable both with and without human participation (e.g., simulated human vs real HMI), to show that **Constrained HMIs** are interface-level concepts, not hard-coded UI implementations.
 
 ---
 
@@ -106,11 +119,12 @@ An artifact qualifies as MVUE if it:
 3. Produces **logs/events** sufficient for replay and audit
 4. Is runnable in a minimal environment (local container or simple host runtime)
 5. Is **clearly labeled non-normative** and includes a “what this proves / what it does not” section
+6. If it involves human participation, demonstrates at least one **Constrained HMI** interaction for a specific human class (e.g., Class-L confirm/abort/escalate)
 
 ### F.3.3 Recommended Starter MVUEs
 
 - **MVUE-A:** Simulated device (L1) + orchestrator (L3) + event log replay
-- **MVUE-B:** Task assignment (L3→L2) + Class-L constrained acknowledgement (L2→L3)
+- **MVUE-B:** Task assignment (L3→L2) + Class-L **Constrained HMI** acknowledgement (L2→L3) using rails (confirm/abort/escalate only)
 - **MVUE-C:** Multi-cell orchestration mock (L3↔L3) demonstrating policy propagation
 - **MVUE-D (Optional):** Environmental interaction mock (e.g., simulated presence
   event) triggering a safe-state transition or task pause, demonstrating that
@@ -127,8 +141,8 @@ UCPIS is interface-first. Reference implementations should organize interfaces i
 |---|---:|---|---|
 | **Physical State** | L1 → L3 | 1→3 | Telemetry and status of devices/cells |
 | **Command / Actuation** | L3 → L1 | 3→1 | Controlled actuation requests |
-| **Task Assignment** | L3 → L2 | 3→2 | Human-mediated work instruction |
-| **Acknowledgement / Completion** | L2 → L3 | 2→3 | Human feedback (confirm/abort/escalate) |
+| **Task Assignment** | L3 → L2 | 3→2 | Human-mediated work instruction via Constrained HMIs |
+| **Acknowledgement / Completion** | L2 → L3 | 2→3 | Human feedback (confirm/abort/escalate) from Constrained HMIs |
 | **Policy / Governance** | L3 ↔ L3 | 3↔3 | Constraints, roles, permissions, audit framing |
 | **Audit / Event Log** | All → Log | all | Replayable events and traceability |
 
@@ -157,9 +171,11 @@ All messages SHOULD include:
 Interfaces SHOULD include explicit capability constraints:
 
 - `human_class` where relevant (Class-L / Class-M / Class-H)
-- `allowed_actions` for constrained UIs
+- `allowed_actions` for constrained UIs (e.g., `["confirm","abort","escalate"]` for Class-L)
 - `constraints` blocks (timeouts, interlocks, prerequisites)
-- explicit “escalate” paths rather than unconstrained overrides
+- explicit `escalate` paths rather than unconstrained overrides
+
+When a message is used to back a **Constrained HMI**, these fields SHOULD be treated as **mandatory** in reference implementations, and the HMI behavior SHOULD be visibly restricted to the declared `allowed_actions`.
 
 ---
 
@@ -180,15 +196,20 @@ A task assignment message SHOULD include:
   - `allowed_actions` (for Class-L: typically confirm/abort/escalate)
   - any required preconditions (interlocks, required device state)
 
+The Layer 2 implementation SHOULD render this as a **Constrained HMI** where only the permitted actions are visible and invocable.
+
 ### F.6.2 Acknowledgement / Completion (L2 → L3)
 
 An acknowledgement message SHOULD include:
 
 - `task_id`
 - `actor` (role- or class-based identifier)
+- `human_class` (to preserve class context where appropriate)
 - `result` (confirm / abort / escalate)
 - optional `notes`
 - optional `observations` (e.g., anomaly flag, assistance required)
+
+The acknowledgement path SHOULD demonstrate that Class-L actors cannot arbitrarily override safety, but CAN escalate when conditions exceed their authority or capability.
 
 ### F.6.3 Physical State (L1 → L3)
 
@@ -210,6 +231,17 @@ A command message SHOULD include:
 - `params` (command parameters)
 - `constraints` (required state, timeout, safety interlocks, etc.)
 
+### F.6.5 HMI View Model (L3 → L2 → Human)
+
+Reference implementations MAY separate the **message envelope** from the **HMI view model**. A view model MAY include:
+
+- `headline` (short textual description)
+- `steps` (render-ready guidance)
+- `actions` (buttons or controls mapped to `allowed_actions`)
+- `risk_hint` (optional risk framing, non-normative)
+
+This helps demonstrate that **Constrained HMIs** are a structured projection of interface contracts, not ad-hoc UI design.
+
 ---
 
 ## F.7 Reference Harness Architecture (Recommended)
@@ -220,7 +252,7 @@ Reference implementations SHOULD be structured as a small harness with clear sea
 
 - **L1 Simulator(s):** deterministic device and sensor simulators (seedable)
 - **L3 Orchestrator Stub:** minimal scheduler / state machine / dispatcher
-- **L2 HMI Stub:** constrained UI surfaces with action rails (confirm/abort/escalate)
+- **L2 HMI Stub:** **Constrained HMI** surfaces implementing at least one Class-L flow (confirm/abort/escalate), and optionally Class-M or Class-H views
 - **Event Bus (Optional):** in-memory or lightweight broker
 - **Event Log:** append-only record of message envelopes (for replay/testing)
 - **Test Runner:** executes scripted scenarios and checks assertions
@@ -230,7 +262,7 @@ Reference implementations SHOULD be structured as a small harness with clear sea
 - **Determinism:** repeatable scenarios using fixed seeds
 - **Replayability:** ability to replay event logs and reproduce outcomes
 - **Observability:** structured logs with correlation IDs
-- **Failure injection:** at least one fault scenario (timeouts, invalid state, operator abort)
+- **Failure injection:** at least one fault scenario (timeouts, invalid state, operator abort or escalate)
 
 ---
 
@@ -262,6 +294,7 @@ This annex does not define formal conformance requirements. However, reference a
 - A list of scenarios and expected outcomes
 - A machine-readable event log output for each scenario
 - A mapping of scenarios to layers (L1/L2/L3)
+- A note identifying which scenarios exercise **Constrained HMIs** and for which human classes
 
 ---
 
@@ -284,12 +317,14 @@ Because reference implementations can prematurely “lock in” assumptions, pub
 - Early ecosystem tooling (schemas, simulators, harnesses)
 - Clear interface discussions without vendor lock-in
 - Repeatable validation for adopters and reviewers
+- Concrete examples of **Constrained HMIs** and human-class–aware participation
 
 ### Prevents
 
 - Premature standard capture by a single reference codebase
 - “Accidental productization” of UCPIS
 - Security or safety mandates creeping in informally
+- Unconstrained HMI surfaces that contradict Annex A human-class assumptions
 
 ---
 
@@ -300,6 +335,9 @@ Because reference implementations can prematurely “lock in” assumptions, pub
 - **MVUE:** Minimum Viable UCPIS-Executable (smallest runnable proof)
 - **Interface Contract:** field requirements + semantics + versioning identity
 - **Harness:** minimal environment used to execute and test scenarios
+- **Constrained HMI:** class-scoped, safety-bounded interaction surface for human participation (see Annex A)
+- **Human Autonomy Class:** classification of human actors by autonomy and leverage (Class-L, Class-M, Class-H, Class-X)
 
 ---
+
 **End of Annex F**
