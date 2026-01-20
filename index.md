@@ -23,10 +23,14 @@ white paper corpus.
 
 - A conceptual cyber-physical reference architecture
 - Interface-first interoperability framing
-- A structured human participation model (by reference)
+- A structured human participation model (by reference only)
 - Constraint-aware system reasoning
 - Architectural treatment of energy, safety, governance, and environment
 - Informative guidance suitable for public infrastructure and industry
+
+Human autonomy profiles are used **solely to scope interfaces and
+safeguards** and are defined informatively in Annex A.
+They are **not diagnostic, evaluative, hierarchical, or prescriptive**.
 
 ---
 
@@ -36,11 +40,15 @@ white paper corpus.
 - No security mandates or profiles
 - No compliance or certification regimes
 - No governance authority or enforcement
-- No performance guarantees or timelines
+- No performance guarantees, roadmaps, or timelines
+
+UCPIS describes **architecture only**.
+If a statement appears to imply authority, enforcement, certification,
+or implementation readiness, that interpretation is incorrect.
 
 ---
 
-## Architectural Summary
+## Conceptual Architecture Summary
 
 UCPIS defines a **three-layer conceptual architecture**, operating within
 a broader socio-technical and environmental context:
@@ -61,15 +69,29 @@ Interfaces — not implementations — are the primary unit of interoperability.
 ## Environmental and Biological Context
 
 UCPIS explicitly acknowledges that cyber-physical systems operate in real
-environments that may include **non-human biological entities** (e.g.,
-wildlife).
+environments that may include **non-human biological entities**
+(e.g., wildlife, livestock, shared human–animal environments).
 
 Such entities:
 - Are not system agents or authorities
 - Are not governance participants
-- Influence safety, resilience, and design constraints
+- Are not anthropomorphized
+- Influence safety, resilience, and design constraints only
 
 Environmental and biological interaction is treated as **context**, not agency.
+
+---
+
+## Minimum Viable UCPIS-Executable (MVUE)
+
+UCPIS defines the concept of a **Minimum Viable UCPIS-Executable (MVUE)** as:
+
+> *“Something executable that exercises UCPIS interfaces; not a full factory
+> stack—just enough code to make the architecture testable.”*
+
+In v1.4, MVUE is **conceptual only**.
+No executable artifacts, reference implementations, demonstrations, or
+conformance claims are published.
 
 ---
 
@@ -78,21 +100,25 @@ Environmental and biological interaction is treated as **context**, not agency.
 ### UCPIS White Paper
 
 - **Universal Cyber-Physical Interoperability Stack (UCPIS): Public White Paper v1.4**  
-  https://github.com/ucpis2026us/ucpis/blob/main/white-paper/UCPIS_White_Paper_v1.4.md
+  https://github.com/ucpis2026us/ucpis/blob/main/whitepaper/UCPIS-White-Paper-v1.4.md
 
 ### Supporting Annexes (Informative / Non-Normative)
 
-- **Annex A** — Definitions, Terminology, and Taxonomy  
+- **Annex A** — Conceptual Model & Definitions  
 - **Annex B** — Interfaces & Data Model  
-- **Annex C** — Reference Architecture  
+- **Annex C** — Reference Architecture Diagrams  
 - **Annex D** — Threat Model & Resilience  
 - **Annex E** — Standards Alignment & Mapping  
 - **Annex F** — Reference Implementation Guidelines *(Deferred)*  
 - **Annex G** — Governance Models *(Deferred)*  
 - **Annex H** — Interoperability Profiles *(Deferred)*  
 
-All annexes are available at:  
-https://github.com/ucpis2026us/ucpis/tree/main/annexes
+All annexes are available under:  
+https://github.com/ucpis2026us/ucpis/tree/main/whitepaper
+
+Deferred annexes are intentionally withheld to prevent premature
+standardization, governance capture, or implementation lock-in.
+They will be activated only if justified by external evidence or adoption.
 
 ---
 
@@ -100,22 +126,28 @@ https://github.com/ucpis2026us/ucpis/tree/main/annexes
 
 UCPIS asserts **no governance authority**.
 
-Governance is treated as a downstream, conditional concern, activated only
-if and when multiple independent stakeholders adopt or steward the
+Governance is treated as a downstream, conditional concern, activated
+only if and when multiple independent stakeholders adopt or steward the
 architecture.
 
 See:
-- **Annex G — Governance Models**
-- `/governance/governance-without-capture.md`
+- **GOVERNANCE.md — Governance Without Capture**
+- **Annex G — Governance Models (Deferred)**
 
 ---
 
-## Status and Maturity
+## Status, Maturity, and Forward Observation
 
 - Stable public informational release (v1.4)
 - Architecture defined; implementations are future work
 - Informative and non-normative
 - Designed for long-term public archival and reference
+
+Future updates, if any, will prioritize **clarity, interpretability,
+and resistance to misinterpretation**, rather than expanded scope,
+authority, or execution.
+
+No subsequent version is active at this time.
 
 ---
 
