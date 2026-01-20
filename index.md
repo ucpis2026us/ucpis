@@ -114,7 +114,7 @@ conformance claims are published.
 - **Annex H** — Interoperability Profiles *(Deferred)*  
 
 All annexes are available under:  
-https://github.com/ucpis2026us/ucpis/tree/main/whitepaper
+https://github.com/ucpis2026us/ucpis/annexes
 
 Deferred annexes are intentionally withheld to prevent premature
 standardization, governance capture, or implementation lock-in.
