@@ -20,6 +20,31 @@ Interoperability Stack (UCPIS), including system layers, interfaces, and integra
 principles. It is technology-agnostic and intended to guide implementation without
 mandating specific vendors or products.
 
+UCPIS models cyber-physical systems as operating within a broader **socio-technical
+and ecological environment**, where human actors, automated systems, and biological
+entities coexist and interact through defined constraints and interfaces.
+
+---
+
+## C.3 Environmental and Biological Context (Informational)
+
+UCPIS architectures may operate in environments containing non-human biological
+entities, including wildlife and domesticated animals. These entities form part of
+the operational context in which cyber-physical systems must function safely and
+predictably.
+
+Non-human biological actors are defined in Annex A.13 and are treated within the
+architecture as **environmental participants**, not system agents.
+
+Architectural considerations include:
+- Presence detection and monitoring
+- Safety zoning and exclusion boundaries
+- Adaptive behavior in response to biological movement
+- Non-deterministic environmental interaction
+
+No authority, decision rights, or accountability are assigned to non-human biological
+entities.
+
 ---
 
 ## C.4 Human Integration by Autonomy Class
@@ -27,6 +52,9 @@ mandating specific vendors or products.
 UCPIS explicitly defines how human actors integrate into the stack based on
 demonstrated autonomy and responsibility. Human Autonomy Classes are defined in
 Annex A.12.
+
+Human actors remain the **only biological entities** granted system authority,
+policy influence, or governance roles.
 
 ---
 
@@ -87,5 +115,35 @@ not through continuous direct control.
 - Cross-layer, subject to UCPIS constraints
 
 **Status**
-Class-X integration is documented for awareness only in v1.3.
+Class-X integration is documented for awareness only in UCPIS v1.4.
 No normative architectural or governance requirements are defined.
+
+---
+
+## C.5 Non-Human Biological Interaction Model (Informational)
+
+Non-human biological actors, including wildlife, may interact with UCPIS-enabled
+systems through proximity, movement, or environmental impact.
+
+Within the reference architecture:
+- Wildlife is treated as a **dynamic environmental factor**
+- Interactions are mediated through sensing, containment, or adaptive control
+- Behavioral unpredictability is assumed by default
+
+**Architectural Principles**
+- Systems SHALL NOT assume symbolic intent or compliance from animals
+- Systems SHALL prioritize safety and avoidance over optimization
+- All responses to biological interaction are governed by human-defined policy
+  and automated control logic
+
+**Examples (Non-Exhaustive)**
+- Wildlife detection triggering safe slow-down or shutdown states
+- Exclusion zones enforced through physical or behavioral deterrence
+- Environmental monitoring informing system scheduling or routing
+
+This model preserves biological dignity by avoiding coercive control while ensuring
+human safety and system integrity.
+
+---
+
+### End of Annex C
