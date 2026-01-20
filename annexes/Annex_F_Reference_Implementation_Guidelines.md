@@ -1,4 +1,17 @@
 # Annex F — Reference Implementation Guidelines (Deferred)
+**UCPIS Version:** v1.4  
+**License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+**Attribution Required:**  
+Michael James Malecek (2026)
+
+**Canonical Repository:**  
+https://github.com/ucpis2026us
+
+**Contact:**  
+ucpis2026@gmail.com
+
+---
 
 **Document:** Universal Cyber-Physical Interoperability Stack (UCPIS)  
 **Annex:** F  
