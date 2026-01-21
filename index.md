@@ -192,7 +192,7 @@ architecture.
 
 See:
 - **Governance Without Capture**  
-  https://github.com/ucpis2026us/ucpis/blob/main/Governance-Without-Capture.md
+  https://github.com/ucpis2026us/ucpis/tree/main/Governance-Without-Capture.md
 - **Annex G — Governance Models** *(Deferred)*
 
 ---
