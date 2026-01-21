@@ -20,9 +20,15 @@ security position, and supporting repository documentation.
 
 ### Added
 
-- Annex F — Reference Implementation Guidelines *(authored; explicitly deferred until executable artifacts exist)*
-- Annex G — Governance Models *(authored deferral; governance not activated)*
-- Annex H — Interoperability Profiles *(authored deferral; pending empirical evidence)*
+- Annex F — Reference Implementation Guidelines  
+  *(authored; explicitly deferred until executable artifacts exist)*
+
+- Annex G — Governance Models  
+  *(authored deferral; governance not activated)*
+
+- Annex H — Interoperability Profiles  
+  *(authored deferral; pending empirical evidence)*
+
 - Governance Without Capture statement (`Governance-Without-Capture.md`)
 - `SECURITY.md` clarifying architectural security posture
 - `repository-structure.md` documenting canonical repository layout
@@ -30,17 +36,26 @@ security position, and supporting repository documentation.
 - Updated `README.md` aligned with v1.4 architecture and scope
 - Updated master generation prompt (`UCPIS_White_Paper_Master_Prompt.md`)
 
+- **Contextual design notes directory (`docs/notes/`)**, including:
+  - `interoperability-origin.md` — architectural motivation and problem framing
+  - `constrained-hmi-design-note.md` — design rationale for constrained
+    human–machine interfaces
+
+Contextual notes are **informative only** and do not define requirements,
+interfaces, or authority.
+
 ---
 
 ### Updated
 
 - **UCPIS White Paper v1.4**
-  - Reordered and unified structure (single coherent narrative)
-  - Corrected layer model to three-layer conceptual architecture
+  - Reordered and unified structure into a single coherent narrative
+  - Corrected layer model to a three-layer conceptual architecture
   - Added explicit environmental and biological context
   - Clarified governance-without-capture posture
   - Tightened MVUE definition to conceptual-only framing
   - Removed duplicated or conflicting architectural descriptions
+  - Added a non-normative Preface framing the interoperability problem
 
 - **Annex A — Definitions, Terminology, and Taxonomy**
   - Formalized Human Autonomy Classes as informational, non-evaluative constructs
@@ -61,6 +76,10 @@ security position, and supporting repository documentation.
   - Clarified alignment with public-domain civic principles
   - Reaffirmed alignment-only posture (no compliance or authority claims)
 
+- **Constrained HMI design note**
+  - Explicitly contextualized within the broader interoperability rationale
+  - Clarified its role as pre-normative architectural guidance only
+
 ---
 
 ### Clarified
@@ -69,8 +88,10 @@ security position, and supporting repository documentation.
 - UCPIS asserts **no governance authority**
 - Interfaces may be agent-agnostic; authority and accountability are human-only
 - Non-human biological entities are treated as environmental context, not agents
-- Governance, interoperability profiles, and reference implementations are
-  intentionally deferred pending real-world adoption and evidence
+- Governance models, interoperability profiles, and reference implementations
+  are intentionally deferred pending real-world adoption and evidence
+- Contextual design notes preserve **architectural rationale only** and do not
+  expand scope or authority
 
 ---
 
@@ -80,7 +101,7 @@ security position, and supporting repository documentation.
 - No product, platform, or implementation claims
 - No security mandates or assurance guarantees
 - No performance promises, timelines, or adoption forecasts
-- All annexes are informative and non-normative unless explicitly stated
+- All annexes and notes are informative and non-normative unless explicitly stated
 
 ---
 
