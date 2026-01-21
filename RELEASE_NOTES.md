@@ -49,6 +49,15 @@ implementation, or certification program.
 - Repository structure documentation
 - Citation and attribution files
 
+### Contextual Design Notes (Informative / Non-Normative)
+- `docs/notes/interoperability-origin.md` — Architectural motivation and
+  problem framing
+- `docs/notes/constrained-hmi-design-note.md` — Design rationale for
+  constrained human–machine interfaces
+
+Contextual notes preserve **architectural intent and rationale only** and
+do not define requirements, interfaces, or authority.
+
 ---
 
 ## Key Changes Since v1.3
@@ -72,6 +81,12 @@ implementation, or certification program.
 - Reaffirmed that **no normative security controls** are defined
 - Elevated **architectural resilience** over control-level prescriptions
 - Clarified security as a context-dependent responsibility of implementers
+
+### Documentation Stratification and Rationale
+- Clarified separation between **canonical architecture** and
+  **contextual design rationale**
+- Introduced a non-normative **WHY layer** (`docs/notes/`) to preserve
+  architectural motivation without expanding scope or authority
 
 ### Reference Implementations and Profiles
 - Defined **Minimum Viable UCPIS-Executable (MVUE)** as conceptual only
