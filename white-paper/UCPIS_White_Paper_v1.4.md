@@ -16,6 +16,56 @@
 
 ---
 
+## Preface — The Missing Interoperability Layer in Industrial Civilization
+
+Modern civilization depends on complex industrial systems: factories, logistics
+networks, energy infrastructure, transportation systems, and large-scale
+automation. These systems underpin economic activity, public infrastructure,
+and national capability. Yet despite their centrality, they lack a shared
+interoperability foundation comparable to what exists in the digital world.
+
+Computing systems interoperate across vendors, environments, and use cases
+because they are built atop open, layered protocols. A computer can connect to
+any compliant network, exchange information with unknown systems, and evolve
+independently of the applications it runs. This interoperability is not
+accidental; it is the result of decades of interface-first architectural
+thinking that treats protocols and contracts as more durable than individual
+implementations.
+
+Industrial systems never received an equivalent foundation.
+
+Robotic arms do not “plug in” to factories the way computers plug into networks.
+Manufacturing equipment, control systems, safety mechanisms, and logistics
+infrastructure are typically integrated through bespoke, proprietary
+interfaces. Interoperability, when it exists, is achieved through custom
+engineering rather than shared architectural assumptions. As a result,
+industrial systems are brittle, difficult to adapt, and slow to evolve.
+
+This absence is not primarily a hardware limitation. It is an architectural one.
+
+What is missing is a common way to describe, connect, constrain, and govern
+heterogeneous cyber-physical systems—systems that combine software, machines,
+humans, energy flows, governance requirements, and environmental context.
+Without such a layer, industrial progress accumulates complexity rather than
+capability, and coordination costs grow faster than system value.
+
+As cyber-physical systems become more autonomous and more interconnected,
+these limitations shift from being operational inconveniences to becoming
+structural risks. Lock-in, fragility, safety hazards, and governance challenges
+emerge not because individual components fail, but because the systems
+themselves were never designed to interoperate coherently.
+
+The Universal Cyber-Physical Interoperability Stack (UCPIS) exists to clarify
+this architectural gap. It does not propose a single solution, product, or
+standard. Instead, it provides a reference architecture for reasoning about how
+diverse cyber-physical systems might interoperate safely, transparently, and
+durably over long time horizons.
+
+This preface provides context only. The sections that follow define UCPIS as an
+informative, non-normative architectural reference.
+
+---
+
 ## Executive Summary
 
 The **Universal Cyber-Physical Interoperability Stack (UCPIS)** is an
@@ -146,11 +196,8 @@ a UX or training problem.
 
 UCPIS models human participation through:
 
-1. **Human Autonomy Classes** — a descriptive taxonomy of human roles and
-   capabilities.
-2. **Constrained Human–Machine Interfaces (Constrained HMIs)** — the
-   class-scoped interaction surfaces through which humans participate in
-   the stack.
+1. **Human Autonomy Classes**
+2. **Constrained Human–Machine Interfaces (Constrained HMIs)**
 
 Both are defined in **Annex A — Definitions, Terminology, and Taxonomy**.
 
@@ -159,137 +206,58 @@ These constructs:
 - Are functional and contextual
 - Constrain interface exposure and authority
 - Do not assign value, status, or worth to human beings
-- Treat human error, confusion, and overload as **expected design inputs**,
-  not exceptional conditions
+- Treat human error, confusion, and overload as **expected design inputs**
 
 ### 5.1 Human Autonomy Classes (Summary)
 
-Human Autonomy Classes provide a **capability- and authority-based**
-classification of human roles, such as:
+- **Class-L — Low-Autonomy Operators**
+- **Class-M — Mid-Autonomy Technicians / Supervisors**
+- **Class-H — High-Autonomy / High-Leverage Architects**
+- **Class-X — Augmented / Composite Actors (Informational in v1.4)**
 
-- **Class-L — Low-Autonomy Operators**  
-  Narrowly scoped tasks, high structure, minimal degrees of freedom.
-
-- **Class-M — Mid-Autonomy Technicians / Supervisors**  
-  SOP execution, bounded troubleshooting, local coordination and escalation.
-
-- **Class-H — High-Autonomy / High-Leverage Architects**  
-  Structural decisions, cross-domain reasoning, policy and constraint design.
-
-- **Class-X — Augmented / Composite Actors (Informational in v1.4)**  
-  Humans operating in concert with advanced tools or AI systems.
-
-Formal definitions and design doctrines for each class are specified in
-**Annex A** and are not repeated here.
+Formal definitions appear in **Annex A**.
 
 ### 5.2 Constrained HMIs (Summary)
 
-**Constrained HMIs** are the architectural mechanism by which human classes
-are connected into the stack:
-
-- **Class-scoped:** Interfaces are explicitly bound to a declared human class.
-- **Safety-bounded:** Interfaces expose only those actions that can be safely
-  exercised by that class.
-- **Audit-ready:** All interactions are logged as part of the system’s audit
-  surface.
-- **Escalation-enabled:** When a situation exceeds the class’s authority or
-  capability, the interface provides a structured path to escalate rather
-  than improvise.
-
-Constrained HMIs are **defined in Annex A** and **exercised in Annex F**
-(via reference implementation guidelines). This white paper only introduces
-the concept at an architectural level.
+Constrained HMIs are class-scoped, safety-bounded, audit-ready, and
+escalation-enabled interaction surfaces. Definitions appear in **Annex A**
+and examples in **Annex F (Deferred)**.
 
 ---
 
 ## 6. Environmental and Biological Context
 
-UCPIS explicitly acknowledges that cyber-physical systems operate in
-real-world environments that may include **non-human biological entities**
-(e.g., wildlife).
+UCPIS explicitly acknowledges real-world environmental and biological context,
+including non-human biological entities.
 
-Such entities:
+Such entities are treated as **context, not agents**.
 
-- Are not system agents or authorities
-- Are not governance participants
-- Influence safety, resilience, and design constraints
-
-Environmental and biological interaction is treated as **context**, not
-agency. Where such interaction is modeled (for example in simulation or
-reference harnesses), it is treated as **external, non-deterministic input**
-rather than as an actor within the interface taxonomy.
-
-Further description of non-human biological actors is provided in **Annex A**
-(Informational).
+Further detail is provided in **Annex A**.
 
 ---
 
 ## 7. Minimum Viable UCPIS-Executable (MVUE)
 
-The **Minimum Viable UCPIS-Executable (MVUE)** is a conceptual definition
-describing the smallest executable artifact capable of exercising UCPIS
-interfaces across layers.
+The **Minimum Viable UCPIS-Executable (MVUE)** is a conceptual definition of
+the smallest executable artifact capable of exercising UCPIS interfaces.
 
-MVUEs:
-
-- Demonstrate interface viability
-- Enable testing, replay, and scenario-based reasoning
-- Do not constitute implementations, products, or recommended stacks
-
-In the context of human participation, an MVUE involving humans should
-demonstrate at least one **Constrained HMI** interaction for a specific
-human class (for example, a Class-L confirm/abort/escalate flow driven by
-a task assignment message).
-
-The detailed MVUE framing and reference implementation guidance are
-described in **Annex F — Reference Implementation Guidelines (Deferred)**.
-
-UCPIS v1.4 defines **no executable artifacts**, and no implementation is
-required or endorsed.
+MVUEs are illustrative only and are not implementations or recommendations.
 
 ---
 
 ## 8. Interoperability as the Core Contribution
 
-Interoperability within UCPIS is defined by:
+Interoperability in UCPIS is architectural, not contractual.
 
-- **Interface-level substitution:** different components with compatible
-  interfaces can be swapped or composed without redesigning the stack.
-- **Event-based coordination:** systems coordinate through explicit event
-  flows, not brittle hidden couplings.
-- **Cross-domain composability:** physical, human, and cyber elements
-  can participate via shared interface contracts.
-- **Graceful degradation under constraint:** systems can continue operating
-  in reduced mode when power, labor, or infrastructure are constrained.
-
-Crucially, interoperability applies not only to machine and data interfaces,
-but also to **human participation interfaces**:
-
-- A Class-L operator can be added, removed, or relocated without rewriting
-  orchestration logic, as long as the Constrained HMI contract is satisfied.
-- A supervisory console can be changed or reimplemented as long as it
-  exercises the same **Class-M** interface semantics.
-- Higher-level orchestration can interface with real humans, simulated
-  humans, or AI agents through the same contracts, subject to governance and
-  safety policies.
-
-Interoperability in UCPIS is architectural, not contractual: it aims to
-describe how systems can fit together, not to mandate specific agreements
-or enforcement regimes.
+It includes interface-level substitution, event-based coordination,
+cross-domain composability, and graceful degradation under constraint.
 
 ---
 
 ## 9. Threat Model and Resilience (By Reference)
 
-UCPIS treats human variability, automation failure, and environmental
-interaction as **expected operating conditions**, not exceptional faults.
-
-Threat modeling and resilience principles are defined in **Annex D —
-Threat Model & Resilience**, which is informative and non-normative.
-
-No normative security controls are defined in v1.4. Any future security
-profiles, if ever produced, must be explicitly versioned, scoped, and
-published separately.
+Threat modeling and resilience principles are defined in **Annex D**.
+No normative security controls are defined in v1.4.
 
 ---
 
@@ -297,57 +265,19 @@ published separately.
 
 UCPIS asserts **no governance authority**.
 
-Governance is treated as a downstream, conditional concern, activated only
-if and when multiple independent stakeholders adopt or steward the
-architecture.
-
-The governance posture emphasizes:
-
-- Avoiding “standard capture” by any single institution
-- Enabling public, multi-stakeholder stewardship if and when adoption
-  warrants it
-- Keeping reference code and MVUE artifacts **non-normative** and
-  vendor-neutral
-
-This posture is expanded in **Annex G — Governance Models (Deferred)** and
-the governance-without-capture statement.
+Governance considerations are deferred and non-binding.
 
 ---
 
 ## 11. Annex Structure
 
-This white paper is complemented by the following non-normative annexes:
-
-- **Annex A:** Definitions, Terminology, and Taxonomy  
-  - Includes Human Autonomy Classes and Constrained HMI definitions.
-- **Annex B:** AI as Electrical and Thermal Load  
-  - Treats AI computation as a physical load on power and cooling.
-- **Annex C:** Reference Architecture  
-  - Illustrative diagrams and layer mappings.
-- **Annex D:** Threat Model & Resilience  
-  - Informative threat considerations and resilience framing.
-- **Annex E:** Standards Alignment & Mapping  
-  - Non-normative mappings to existing standards and frameworks.
-- **Annex F:** Reference Implementation Guidelines *(Deferred)*  
-  - MVUE framing and non-normative guidance for reference harnesses and
-    Constrained HMI demonstrations.
-- **Annex G:** Governance Models *(Deferred)*  
-  - Possible governance structures and stewardship patterns.
-- **Annex H:** Interoperability Profiles *(Deferred)*  
-  - Potential profiles for specific domains or sectors.
-
-Annexes are informative and may evolve or expand independently of the core
-white paper, subject to explicit versioning and attribution.
+Annexes A–H are informative and versioned independently.
 
 ---
 
 ## 12. Status
 
 UCPIS v1.4 represents a **stable, public, informational release**.
-
-Future revisions will occur only through explicit versioned updates, with
-corresponding changes to annexes and reference materials. No implicit
-governance or compliance authority is granted or implied by this document.
 
 ---
 
