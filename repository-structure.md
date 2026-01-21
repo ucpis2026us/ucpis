@@ -30,6 +30,7 @@ ucpis/
 ├── docs/  
 │   └── notes/  
 │       └── constrained-hmi-design-note.md  
+│       └── interoperability-origin.md  
 ├── prompts/  
 │   └── UCPIS_White_Paper_Master_Prompt.md  
 ├── white-paper/  
