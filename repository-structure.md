@@ -6,8 +6,8 @@
 
 This document describes the canonical file and folder structure of the UCPIS
 repository as of version 1.4. It is intended to help readers, reviewers, and
-contributors understand how architectural, contextual, and orienting
-materials are organized.
+contributors understand how architectural, contextual, and orienting materials
+are organized.
 
 The repository contains **architectural and interpretive documentation only**.
 No products, implementations, standards, compliance mechanisms, or enforcement
@@ -17,161 +17,88 @@ authorities are defined.
 
 ## Top-Level Structure
 
-ucpis/
-├── annexes/
-│   ├── README.md
-│   ├── Annex_A_Definitions_Terminology_Taxonomy.md
-│   ├── Annex_B_AI_as_Electrical_and_Thermal_Load.md
-│   ├── Annex_C_Reference_Architecture_Diagrams.md
-│   ├── Annex_D_Threat_Model_and_Resilience.md
-│   ├── Annex_E_Standards_Alignment_and_Mapping.md
-│   ├── Annex_F_Reference_Implementation_Guidelines.md
-│   ├── Annex_G_Governance_Models.md
-│   └── Annex_H_Interoperability_Profiles.md
-│
-├── docs/
-│   ├── README.md
-│   ├── how-to-read-ucpis.md
-│   ├── ucpis-at-a-glance.md
-│   ├── document-map.md
-│   ├── interpretation-notes.md
-│   └── notes/
-│       ├── README.md
-│       ├── interoperability-origin.md
-│       ├── constrained-hmi-design-note.md
-│       └── v1.5-activation-criteria.md
-│
-├── prompts/
-│   └── UCPIS_White_Paper_Master_Prompt.md
-│
-├── white-paper/
-│   ├── README.md
-│   └── UCPIS_White_Paper_v1.4.md
-│
-├── ATTRIBUTION.md
-├── CHANGELOG.md
-├── CITATION.cff
-├── DISCLAIMER.md
-├── Governance-Without-Capture.md
-├── How-to-Cite-UCPIS.md
-├── LICENSE
-├── README.md
-├── RELEASE_NOTES.md
-├── SECURITY.md
-├── index.md
-└── repository-structure.md
+The repository is organized into clearly separated directories and files,
+each serving a distinct interpretive role.
 
 ---
 
-## Directory and File Descriptions
+### `annexes/` — Architectural Elaboration
 
-### `annexes/`
-Contains architectural annexes that **elaborate and deepen** the UCPIS white
-paper.
+Architectural annexes that elaborate and deepen the UCPIS white paper.
 
-- **Annexes A–E** are active and applicable in v1.4.
-- **Annexes F–H** are authored but explicitly **deferred** to prevent premature
-  standardization, governance capture, or implementation lock-in.
+- `README.md` — Annex scope, status, and non-normative posture
+- `Annex_A_Definitions_Terminology_Taxonomy.md`
+- `Annex_B_AI_as_Electrical_and_Thermal_Load.md`
+- `Annex_C_Reference_Architecture_Diagrams.md`
+- `Annex_D_Threat_Model_and_Resilience.md`
+- `Annex_E_Standards_Alignment_and_Mapping.md`
+- `Annex_F_Reference_Implementation_Guidelines.md` *(Deferred)*
+- `Annex_G_Governance_Models.md` *(Deferred)*
+- `Annex_H_Interoperability_Profiles.md` *(Deferred)*
 
-All annexes are informative and non-normative unless explicitly stated.
-See `annexes/README.md` for annex status and posture.
-
----
-
-### `docs/`
-Contains **reader-facing guidance and interpretation aids**.
-
-Documents in this directory help readers:
-- understand what UCPIS is and is not,
-- navigate the documentation corpus,
-- avoid common misinterpretations,
-- read the architecture correctly.
-
-Materials in `docs/` are **not canonical architecture** and define no
-requirements or authority.
+Annexes A–E are active in v1.4. Annexes F–H are intentionally deferred to prevent
+premature standardization, governance capture, or implementation lock-in.
 
 ---
 
-### `docs/how-to-read-ucpis.md`
-Explains recommended reading order, canonical vs contextual material, and how
-UCPIS should (and should not) be interpreted.
+### `docs/` — Reader Guidance and Interpretation
+
+Reader-facing documentation that supports correct interpretation and navigation
+of the UCPIS corpus.
+
+- `README.md` — Scope and purpose of reader-guidance materials
+- `how-to-read-ucpis.md` — Recommended reading order and interpretive guidance
+- `ucpis-at-a-glance.md` — One-page classification of what UCPIS is and is not
+- `document-map.md` — Conceptual map of document relationships
+- `interpretation-notes.md` — Guardrails against common misinterpretations
+
+#### `docs/notes/` — Contextual Rationale (WHY)
+
+Contextual and pre-normative design rationale explaining *why* architectural
+choices were made.
+
+- `README.md` — Notes posture and non-authoritative status
+- `interoperability-origin.md` — Civilizational interoperability motivation
+- `constrained-hmi-design-note.md` — Rationale for Constrained HMIs
+- `v1.5-activation-criteria.md` — Discipline document for future versioning
+
+If conflicts arise, the white paper and active annexes take precedence.
 
 ---
 
-### `docs/ucpis-at-a-glance.md`
-A one-page classification artifact summarizing what UCPIS is, what it is not,
-and its intended role.
+### `white-paper/` — Canonical Architecture (WHAT)
+
+The authoritative architectural definition of UCPIS.
+
+- `README.md` — Orientation and non-normative posture
+- `UCPIS_White_Paper_v1.4.md` — Canonical reference architecture
 
 ---
 
-### `docs/document-map.md`
-A conceptual map showing how UCPIS documents relate across layers
-(WHY / WHAT / DEPTH / ENTRY / READER GUIDANCE).
+### `prompts/` — Generation Artifacts
+
+Artifacts used to generate and regenerate the UCPIS documentation corpus.
+
+- `UCPIS_White_Paper_Master_Prompt.md`
+
+These files support reproducibility but are not part of the architecture itself.
 
 ---
 
-### `docs/interpretation-notes.md`
-Explicit guardrails against common misreadings, projection of authority, or
-assumptions of implementability.
+### Repository Root Files — Governance, Attribution, and Metadata
 
----
-
-### `docs/notes/`
-Contains **contextual and pre-normative design rationale**.
-
-Documents here explain *why* architectural choices were made but do not define
-UCPIS behavior, scope, or obligations.
-
-If any conflict arises between notes and canonical documents, the white paper
-and active annexes take precedence.
-
----
-
-### `docs/notes/interoperability-origin.md`
-Explains the architectural motivation and civilizational interoperability gap
-that led to UCPIS.
-
----
-
-### `docs/notes/constrained-hmi-design-note.md`
-Design rationale for Constrained Human–Machine Interfaces (Constrained HMIs),
-including safety posture, authority minimality, and escalation logic.
-
----
-
-### `docs/notes/v1.5-activation-criteria.md`
-A discipline document recording the conditions under which a v1.5 release would
-be justified. It does not initiate v1.5 work.
-
----
-
-### `prompts/`
-Contains the canonical master prompt used to generate and regenerate the UCPIS
-white paper corpus in a consistent, version-controlled manner.
-
----
-
-### `white-paper/`
-Contains the **canonical UCPIS architectural reference**.
-
-- `UCPIS_White_Paper_v1.4.md` — the authoritative architecture document
-- `README.md` — orientation and non-normative posture for the white paper
-
----
-
-## Governance, Attribution, and Meta Files
-
-- **`ATTRIBUTION.md`** — historical authorship and attribution
-- **`CHANGELOG.md`** — versioned documentation changes
-- **`CITATION.cff`** — machine-readable citation metadata
-- **`DISCLAIMER.md`** — legal and practical limitations
-- **`Governance-Without-Capture.md`** — governance posture statement
-- **`How-to-Cite-UCPIS.md`** — citation guidance
-- **`LICENSE`** — CC BY 4.0 license
-- **`SECURITY.md`** — security posture clarification
-- **`RELEASE_NOTES.md`** — v1.4 release summary
-- **`README.md`** — repository overview and scope
-- **`index.md`** — canonical public landing page
+- `ATTRIBUTION.md` — Historical authorship and attribution
+- `CHANGELOG.md` — Versioned documentation changes
+- `CITATION.cff` — Machine-readable citation metadata
+- `DISCLAIMER.md` — Legal and practical limitations
+- `Governance-Without-Capture.md` — Governance posture statement
+- `How-to-Cite-UCPIS.md` — Human-readable citation guidance
+- `LICENSE` — CC BY 4.0 license
+- `README.md` — Repository overview and scope
+- `RELEASE_NOTES.md` — v1.4 release summary
+- `SECURITY.md` — Security posture clarification
+- `index.md` — Canonical public landing page
+- `repository-structure.md` — This document
 
 ---
 
@@ -179,19 +106,19 @@ Contains the **canonical UCPIS architectural reference**.
 
 The repository is intentionally structured around separable documentation layers:
 
-1. **WHAT exists (Canonical Architecture)**  
-   - `white-paper/`
+1. **WHAT exists — Canonical Architecture**  
+   - `white-paper/`  
    - `annexes/Annex_A–E`
 
-2. **WHY it exists (Rationale and Intent)**  
+2. **WHY it exists — Rationale and Intent**  
    - `docs/notes/`
 
 3. **DEPTH and ELABORATION**  
    - `annexes/` (including deferred annexes)
 
 4. **READER ORIENTATION**  
-   - `index.md`
-   - `docs/`
+   - `index.md`  
+   - `docs/`  
    - `README.md` files at major boundaries
 
 This separation prevents scope confusion, premature claims, and accidental
