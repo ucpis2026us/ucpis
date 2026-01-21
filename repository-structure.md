@@ -27,8 +27,8 @@ each serving a distinct interpretive role.
 Architectural annexes that elaborate and deepen the UCPIS white paper.
 
 - `README.md` — Annex scope, status, and non-normative posture
-- `Annex_A_Definitions_Terminology_Taxonomy.md`
-- `Annex_B_AI_as_Electrical_and_Thermal_Load.md`
+- `Annex_A_Agent_Agnostic_Interfaces.md`
+- `Annex_B_AI_as_Electrical_Load.md`
 - `Annex_C_Reference_Architecture_Diagrams.md`
 - `Annex_D_Threat_Model_and_Resilience.md`
 - `Annex_E_Standards_Alignment_and_Mapping.md`
@@ -75,36 +75,25 @@ The authoritative architectural definition of UCPIS.
 
 ---
 
-### `prompts/` — Generation and Knowledge-Transfer Artifacts
+### `prompts/` — Generation and Continuity Artifacts
 
-Contains prompt artifacts used to generate, regenerate, and internally
-prepare UCPIS documentation.
+Prompt artifacts used to generate, regenerate, and preserve continuity of
+UCPIS documentation.
 
 These files are **not architectural documents** and define no scope,
-authority, or requirements. They exist to support reproducibility,
-continuity, and disciplined evolution of the corpus.
+authority, or requirements. They exist solely to support reproducibility,
+intent preservation, and disciplined evolution.
+
+- `README.md` — Scope and interpretation rules for prompt artifacts
 
 - `UCPIS_White_Paper_Master_Prompt.md`  
-  The **canonical public master prompt** used to generate the UCPIS v1.4
-  white paper, annexes, and supporting documents in a consistent,
-  institution-safe manner.
-
-  This prompt:
-  - reflects the locked v1.4 posture,
-  - encodes global constraints and non-goals,
-  - ensures architectural coherence across documents,
-  - is suitable for public archival and audit.
+  The **canonical public master prompt** used to reproduce the UCPIS v1.4
+  documentation corpus in a consistent, institution-safe manner.
 
 - `UCPIS_v1.5_Upgrade_Knowledge_Transfer_Prompt.md`  
-  An **internal continuity and intent-preservation artifact** used to
-  carry forward v1.5 posture, risks, and preparation logic while v1.4
-  remains active.
-
-  This document:
-  - is explicitly **not for publication**,
-  - does not activate v1.5 work,
-  - does not modify the public architecture,
-  - records internal guardrails, stress signals, and decision criteria.
+  A **continuity and intent-preservation artifact** that records internal
+  posture, guardrails, and activation criteria for any potential future
+  version.
 
 If any conflict arises between prompt artifacts and published documents,
 the **white paper and active annexes always take precedence**.
@@ -113,13 +102,14 @@ the **white paper and active annexes always take precedence**.
 
 ### Repository Root Files — Governance, Attribution, and Metadata
 
+- `.gitignore` — Repository hygiene configuration
 - `ATTRIBUTION.md` — Historical authorship and attribution
 - `CHANGELOG.md` — Versioned documentation changes
 - `CITATION.cff` — Machine-readable citation metadata
 - `DISCLAIMER.md` — Legal and practical limitations
-- `Governance-Without-Capture.md` — Governance posture statement
-- `How-to-Cite-UCPIS.md` — Human-readable citation guidance
-- `LICENSE` — CC BY 4.0 license
+- `Governance_Without_Capture.md` — Governance posture statement
+- `HOW_TO_CITE_UCPIS.md` — Human-readable citation guidance
+- `LICENSE` — Creative Commons Attribution 4.0 (CC BY 4.0)
 - `README.md` — Repository overview and scope
 - `RELEASE_NOTES.md` — v1.4 release summary
 - `SECURITY.md` — Security posture clarification
@@ -145,7 +135,7 @@ The repository is intentionally structured around separable documentation layers
 4. **READER ORIENTATION**  
    - `index.md`  
    - `docs/`  
-   - `README.md` files at major boundaries
+   - `README.md` files at major semantic boundaries
 
 This separation prevents scope confusion, premature claims, and accidental
 institutionalization.
