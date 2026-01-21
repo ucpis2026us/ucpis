@@ -75,13 +75,39 @@ The authoritative architectural definition of UCPIS.
 
 ---
 
-### `prompts/` — Generation Artifacts
+### `prompts/` — Generation and Knowledge-Transfer Artifacts
 
-Artifacts used to generate and regenerate the UCPIS documentation corpus.
+Contains prompt artifacts used to generate, regenerate, and internally
+prepare UCPIS documentation.
 
-- `UCPIS_White_Paper_Master_Prompt.md`
+These files are **not architectural documents** and define no scope,
+authority, or requirements. They exist to support reproducibility,
+continuity, and disciplined evolution of the corpus.
 
-These files support reproducibility but are not part of the architecture itself.
+- `UCPIS_White_Paper_Master_Prompt.md`  
+  The **canonical public master prompt** used to generate the UCPIS v1.4
+  white paper, annexes, and supporting documents in a consistent,
+  institution-safe manner.
+
+  This prompt:
+  - reflects the locked v1.4 posture,
+  - encodes global constraints and non-goals,
+  - ensures architectural coherence across documents,
+  - is suitable for public archival and audit.
+
+- `UCPIS_v1.5_Upgrade_Knowledge_Transfer_Prompt.md`  
+  An **internal continuity and intent-preservation artifact** used to
+  carry forward v1.5 posture, risks, and preparation logic while v1.4
+  remains active.
+
+  This document:
+  - is explicitly **not for publication**,
+  - does not activate v1.5 work,
+  - does not modify the public architecture,
+  - records internal guardrails, stress signals, and decision criteria.
+
+If any conflict arises between prompt artifacts and published documents,
+the **white paper and active annexes always take precedence**.
 
 ---
 
