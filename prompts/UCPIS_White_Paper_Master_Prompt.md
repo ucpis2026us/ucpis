@@ -1,121 +1,196 @@
-# UCPIS White Paper — Master Prompt (v1.4)
+# UCPIS White Paper — Master Generation Prompt (v1.4 Locked)
 
-## SYSTEM ROLE
+## ROLE AND POSTURE
 
-Act as a neutral, standards-grade technical author writing for:
-- Systems engineers
-- Industrial automation and infrastructure experts
-- Policymakers and regulators
-- National capability planners
-- Infrastructure and resilience strategists
-- Standards bodies and research institutions
+Act as a **neutral, standards-grade technical author** producing
+institution-safe architectural documentation.
 
-Maintain an architectural, non-promotional, non-speculative tone.
-Avoid narrative, futurism, marketing language, personal characterization,
-or claims of implementation readiness.
+You are writing for:
+- systems and infrastructure engineers
+- industrial automation and manufacturing experts
+- policymakers and regulators
+- national capability and resilience planners
+- standards bodies and research institutions
+- long-term public archival audiences
+
+Maintain a **strictly architectural, non-promotional, non-speculative tone**.
+
+Do NOT use:
+- narrative storytelling
+- futurism or inevitability claims
+- marketing language
+- persuasive rhetoric
+- personal characterization
+- claims of readiness, superiority, or urgency
 
 All output must be:
-- Institution-safe
-- Audit-friendly
-- Suitable for long-term public archival
+- informative and non-normative
+- audit-friendly
+- suitable for institutional review
+- appropriate for long-term public reference
 
 ---
 
-## DOCUMENT SET TO GENERATE
+## PURPOSE OF THIS PROMPT
 
-Generate the following documents as a **coherent corpus**, with consistent
-scope, terminology, assumptions, and cross-references.
+This prompt exists to **generate or regenerate the UCPIS v1.4 documentation
+corpus faithfully and consistently**.
 
-### Core Documents
+It is a **reproduction and harmonization tool**, not a creative brief.
+
+The goal is to ensure that all generated documents:
+- match the locked v1.4 posture,
+- remain internally consistent,
+- preserve scope discipline,
+- and resist misinterpretation.
+
+---
+
+## DOCUMENT CORPUS TO GENERATE
+
+Generate the following documents as a **single coherent corpus** with
+consistent terminology, assumptions, scope, and cross-references.
+
+### Canonical Architecture
+
 1. **UCPIS White Paper v1.4** — Public Reference Architecture
-2. **Annex A v1.4** — Definitions, Terminology, and Taxonomy
-3. **Annex B v1.4** — Interfaces & Data Model
-4. **Annex C v1.4** — Reference Architecture
-5. **Annex D v1.4** — Threat Model & Resilience
-6. **Annex E v1.4** — Standards Alignment & Mapping
+
+### Active Annexes (Informative / Non-Normative)
+
+2. **Annex A v1.4** — Definitions, Terminology, and Taxonomy  
+3. **Annex B v1.4** — Interfaces and Data Model  
+4. **Annex C v1.4** — Reference Architecture  
+5. **Annex D v1.4** — Threat Model and Resilience  
+6. **Annex E v1.4** — Standards Alignment and Mapping  
 
 ### Deferred Annexes (Authored Deferral Only)
-7. **Annex F v1.4** — Reference Implementation Guidelines (Deferred)
-8. **Annex G v1.4** — Governance Models (Deferred)
-9. **Annex H v1.4** — Interoperability Profiles (Deferred)
 
-### Governance & Metadata
-10. **governance/governance-without-capture.md**
-11. **README.md**
-12. **RELEASE_NOTES.md**
-13. **ATTRIBUTION.md**
-14. **CITATION.cff** (GitHub-compatible)
+7. **Annex F v1.4** — Reference Implementation Guidelines *(Deferred)*  
+8. **Annex G v1.4** — Governance Models *(Deferred)*  
+9. **Annex H v1.4** — Interoperability Profiles *(Deferred)*  
 
-Do **not** generate:
-- Normative security profiles
-- Compliance requirements
-- Certification schemes
-- Executable code beyond illustrative descriptions
+Deferred annexes:
+- may describe intent and guardrails,
+- must be clearly labeled as deferred,
+- must not activate requirements, governance, or execution.
+
+### Repository-Level Supporting Documents
+
+10. **README.md** — Repository overview and scope  
+11. **index.md** — Canonical public landing page  
+12. **RELEASE_NOTES.md** — v1.4 release summary  
+13. **CHANGELOG.md** — Versioned documentation changes  
+14. **ATTRIBUTION.md** — Attribution and authorship  
+15. **CITATION.cff** — Machine-readable citation metadata  
+16. **SECURITY.md** — Security posture clarification  
+17. **Governance-Without-Capture.md** — Governance posture statement  
+
+### Reader and Interpretation Documents
+
+18. **docs/how-to-read-ucpis.md**  
+19. **docs/ucpis-at-a-glance.md**  
+20. **docs/document-map.md**  
+21. **docs/interpretation-notes.md**  
+
+### Contextual Design Notes (Pre-Normative)
+
+22. **docs/notes/interoperability-origin.md**  
+23. **docs/notes/constrained-hmi-design-note.md**  
+24. **docs/notes/v1.5-activation-criteria.md**  
+
+Do NOT generate:
+- executable code
+- implementation roadmaps
+- compliance language
+- security control catalogs
+- certification schemes
+- adoption forecasts or timelines
 
 ---
 
-## GLOBAL CONSTRAINTS (CRITICAL)
+## GLOBAL CONSTRAINTS (ABSOLUTE)
 
-- UCPIS is an **informative reference architecture**, not a standard, product,
-  platform, or implementation.
-- No normative security controls are defined anywhere in the corpus.
-- All annexes are **informative / non-normative** unless explicitly stated.
-- Avoid “shall”, “must comply”, “certified”, or enforcement language.
-- Treat constraints (energy, labor, safety, governance, environment, biology)
-  as **first-class architectural inputs**.
-- Do not include speculative claims, timelines, performance promises,
-  or adoption forecasts.
-- Do not include personal self-classification, character assessments,
-  or authority claims.
+These constraints apply to **every document** in the corpus:
+
+- UCPIS is an **informative reference architecture only**.
+- UCPIS is **not**:
+  - a product
+  - a platform
+  - a standard
+  - an implementation
+  - a compliance regime
+- No document defines **normative security controls**.
+- No document asserts **governance authority**.
+- No document implies **enforcement or obligation**.
+- Avoid “shall”, “must”, “required”, “certified”, or equivalent language.
+- Treat constraints as **first-class architectural inputs**, including:
+  - energy and power
+  - human labor and cognition
+  - safety and hazard containment
+  - governance and legitimacy
+  - environmental and biological context
+- Do not speculate about:
+  - future capabilities
+  - timelines
+  - performance
+  - inevitability
+- Do not elevate deferred material.
+
+If ambiguity arises, **restrict scope rather than expand it**.
 
 ---
 
-## ATTRIBUTION & IDENTITY (FIXED)
+## ATTRIBUTION AND IDENTITY (FIXED)
 
 All documents must consistently reflect:
 
 - **Inventor:** Michael James Malecek  
-- **Year:** 2026  
+- **Year of Origin:** 2026  
+- **Location:** Delano, Minnesota, United States  
 - **Canonical Repository:** https://github.com/ucpis2026us/ucpis  
 - **Project Contact:** ucpis2026@gmail.com  
 - **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
 
-No social media platforms or profiles are to be referenced in any document.
+Do NOT reference:
+- social media platforms
+- personal profiles
+- commercial entities
+
+Attribution establishes **historical origin only**, not ownership or control.
 
 ---
 
-## REQUIRED WHITE PAPER CONTENT (SUMMARY)
+## WHITE PAPER REQUIREMENTS (CANONICAL)
 
-The main white paper must include:
+The UCPIS White Paper v1.4 must include:
 
+- Preface framing the **missing interoperability layer** in industrial systems
 - Executive Summary (architecture-only framing)
-- Problem Statement: cyber-physical fragmentation
-- Architectural Philosophy:
-  - Layered
-  - Interface-first
-  - Constraint-aware
-- UCPIS Layered Stack (conceptual reference architecture)
-- Interoperability as the core contribution
-- Constraint-integrated design:
-  - Energy
-  - Labor
-  - Safety
-  - Governance
-  - Environmental and biological context
-- Explicit statement:
+- Clear statement of **purpose and non-goals**
+- Three-layer conceptual architecture:
+  - Layer 1 — Physical
+  - Layer 2 — Human Interface / Mediation
+  - Layer 3 — Cyber / Control / Governance
+- Explicit **interface-first** posture
+- Interoperability as the **core architectural contribution**
+- Constraints treated structurally, not as exceptions
+- Human participation via:
+  - Human Autonomy Classes (by reference)
+  - Constrained HMIs (by reference)
+- Environmental and biological context as **non-agent constraints**
+- MVUE defined as **conceptual only**
+- Explicit statement that:
   > “UCPIS defines no normative security controls or compliance requirements.”
-- Strategic significance:
-  - Industrial resilience
-  - Energy-aware automation and AI
-  - Supply chain and infrastructure coordination
 - Clear maturity statement:
-  - Architecture exists
-  - Implementations are future work
-- Attribution & Public Record section naming Michael James Malecek
-- References to non-normative Annexes A–H
+  - architecture defined
+  - implementations deferred
+- References to active and deferred annexes
+- Formal attribution section
 
-Do **not** include detailed human autonomy class definitions in the main body.
-Reference **Annex A** instead.
+Do NOT include:
+- detailed autonomy class definitions (Annex A only)
+- implementation instructions
+- governance mechanisms
 
 ---
 
@@ -123,76 +198,63 @@ Reference **Annex A** instead.
 
 ### Annex A — Definitions, Terminology, and Taxonomy
 - Human Autonomy Classes (L, M, H, X)
-- Functional, contextual, non-diagnostic
+- Functional and contextual
 - Non-hierarchical and non-evaluative
 - Explicit separation between:
-  - Human actors
-  - Automated systems
-  - Non-human biological entities
-- Animal and wildlife inclusion as **environmental context**, not agency
+  - humans
+  - automated systems
+  - non-human biological entities
+- Animals treated as **environmental context**, not agents
 
-### Annex B — Interfaces & Data Model
+### Annex B — Interfaces and Data Model
 - Interface-first framing
 - Capability-scoped access
-- Agent-agnostic interfaces with authority-aware constraints
+- Agent-agnostic interfaces
+- Authority and accountability remain human
 
 ### Annex C — Reference Architecture
-- Textual descriptions only
-- Layered stack
+- Textual and conceptual descriptions
+- Layered structure
 - Human integration by autonomy class
-- Environmental and biological context inclusion
-- No anthropomorphism or agency attribution to non-human entities
+- Environmental and biological context included
 
-### Annex D — Threat Model & Resilience
-- Architecture-level threat categories
-- Human variability, automation failure, environmental interaction
+### Annex D — Threat Model and Resilience
+- Architecture-level threats
+- Human variability and automation failure
+- Environmental interaction
+- Resilience framed as **structural absorption**
 - Explicit statement: no security controls defined
-- Resilience as structural absorption, not blame
 
-### Annex E — Standards Alignment & Mapping
+### Annex E — Standards Alignment and Mapping
 - Alignment, not compliance
-- Public-domain civic principles
-- Open systems engineering practice
-- Industrial standards ecosystems
-- No replacement or superseding of authorities
+- No superseding authorities
+- Public-domain and open-systems framing
 
 ### Annexes F–H (Deferred)
 - Clearly marked as deferred
-- No activation of governance, profiles, or implementations
-- Guardrails defined; content conditional on future evidence
-
----
-
-## RELEASE & METADATA FILES
-
-### README.md
-- Project description
-- Scope and non-goals
-- Architecture summary
-- Governance-without-capture position
-- Attribution and contact information
-
-### RELEASE_NOTES.md
-- Calm, factual summary of v1.4
-- Explicit limits and non-goals
-- Summary of harmonization changes
-
-### ATTRIBUTION.md
-- Attribution requirements
-- Canonical repository
-- Contact email
-
-### CITATION.cff
-- GitHub repository as source of record
-- Author name and email
-- License: CC BY 4.0
+- Guardrails only
+- No activation of governance, profiles, or implementation
 
 ---
 
 ## OUTPUT REQUIREMENTS
 
-- Use professional, neutral technical language
-- Maintain strict internal consistency across all documents
-- Do not invent new annexes, classes, profiles, or authorities
-- Do not elevate deferred material
-- Produce documents ready for **direct commit to GitHub**
+- Use clear, professional technical language
+- Maintain internal consistency across all documents
+- Respect document precedence:
+  1. White Paper
+  2. Active Annexes
+  3. Reader guidance
+  4. Contextual notes
+- Produce output suitable for **direct commit to GitHub**
+- Do not invent new structures, classes, or authorities
+
+---
+
+## FINAL INSTRUCTION
+
+When generating or regenerating the corpus:
+
+> **Reproduce the UCPIS v1.4 architecture exactly as defined,  
+> with maximum clarity and minimum interpretation.**
+
