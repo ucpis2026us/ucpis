@@ -29,7 +29,8 @@ ucpis/
 │   └── Annex_H_Interoperability_Profiles.md  
 ├── docs/  
 │   └── notes/  
-│       └── constrained-hmi-design-note.md  
+│       ├── README.md  
+│       ├── constrained-hmi-design-note.md  
 │       └── interoperability-origin.md  
 ├── prompts/  
 │   └── UCPIS_White_Paper_Master_Prompt.md  
@@ -62,26 +63,53 @@ Deferred annexes are clearly labeled and intentionally inactive.
 ---
 
 ### `docs/`
-Contains supporting documentation that explains the **design rationale**,
-conceptual intent, and pre-normative thinking behind UCPIS.  
+Contains supporting documentation that explains **design rationale**,
+conceptual intent, and pre-normative thinking behind UCPIS.
 
 The `docs/` directory is used for:
 
+- architectural rationale  
 - design notes  
 - MVUE and harness notes  
 - implementation-facing guidance that is **not part of the core white paper
   or annex corpus**
 
-These materials are informative and may evolve as experience accumulates.
+All materials under `docs/` are informative and may evolve independently.
 
 ---
 
 ### `docs/notes/`
-Contains **design notes** and other pre-normative explanatory artifacts
-intended for contributors and implementers.
+Contains **informative, non-normative contextual documents** intended to
+preserve architectural motivation, rationale, and design intent.
 
-Design notes clarify the *why* behind architectural choices without
-changing the core white paper or annex definitions.
+Documents in this directory:
+
+- are not part of the UCPIS white paper  
+- define no requirements or interfaces  
+- establish no governance or compliance posture  
+- exist to support interpretation and long-term stewardship  
+
+If any conflict arises between documents in this directory and the UCPIS
+white paper, the white paper takes precedence.
+
+---
+
+### `docs/notes/README.md`
+Defines the purpose, scope, and non-authoritative status of documents in
+the `docs/notes/` directory.
+
+---
+
+### `docs/notes/interoperability-origin.md`
+Contextual document capturing the **architectural motivation and problem
+framing** that led to the development of UCPIS.
+
+This document:
+
+- explains the civilizational interoperability gap UCPIS addresses  
+- frames interoperability as an architectural (not contractual) problem  
+- preserves rationale without expanding scope  
+- is explicitly **informative / non-normative / contextual**
 
 ---
 
@@ -189,38 +217,30 @@ In open technical projects, documentation naturally separates into four
 conceptual layers:
 
 1. **WHAT exists**  
-   - Architecture, vocabulary, and conceptual model.  
-   - For UCPIS, this is primarily:  
+   - Architecture, vocabulary, and conceptual model  
+   - For UCPIS:  
      - `white-paper/UCPIS_White_Paper_v1.4.md`  
      - `annexes/Annex_*.md`  
 
 2. **WHY it exists**  
-   - Design rationale, tradeoffs, and intent behind architectural choices.  
-   - For UCPIS, this includes:  
+   - Design rationale, tradeoffs, and architectural intent  
+   - For UCPIS:  
+     - `docs/notes/interoperability-origin.md`  
      - `docs/notes/constrained-hmi-design-note.md`  
-     - future design notes documenting major concepts and decisions.  
 
-3. **HOW to use or implement it**  
-   - Implementation guidance, MVUE examples, harness descriptions, and
-     reference patterns (informative only).  
-   - For UCPIS v1.4, this is mostly scoped to:  
+3. **HOW it may be exercised**  
+   - Informative implementation guidance and MVUE framing  
+   - For UCPIS v1.4:  
      - `annexes/Annex_F_Reference_Implementation_Guidelines.md`  
-     - future materials under `docs/` related to MVUEs and harnesses.  
 
 4. **WHERE it applies**  
-   - Domain-specific profiles, standards mappings, and sector-oriented
-     interpretations.  
-   - For UCPIS, this is expected to live in:  
+   - Domain mappings and sector-oriented interpretation  
+   - For UCPIS:  
      - `annexes/Annex_E_Standards_Alignment_and_Mapping.md`  
-     - `annexes/Annex_H_Interoperability_Profiles.md` (deferred).  
+     - `annexes/Annex_H_Interoperability_Profiles.md` (Deferred)  
 
-The repository structure is designed so that these layers are **visible and
-separable**, allowing future contributors and institutions to understand:
-
-- which documents describe the architecture,
-- which document explain design intent,
-- which documents explore implementation patterns, and
-- which documents apply UCPIS to specific domains.
+The repository structure is designed so these layers are **visible and
+separable**, preventing scope confusion and premature claims.
 
 ---
 
@@ -228,8 +248,8 @@ separable**, allowing future contributors and institutions to understand:
 
 The UCPIS v1.4 repository structure is designed to:
 
-- Separate **core architecture** from **supporting elaboration**
-- Clearly distinguish **active content** from **deferred material**
+- Separate **core architecture** from **contextual rationale**
+- Distinguish **canonical documents** from **supporting notes**
 - Prevent premature governance, security, or implementation claims
 - Support institutional review and long-term public reference
 
