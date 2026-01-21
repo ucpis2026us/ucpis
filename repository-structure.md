@@ -22,60 +22,102 @@ each serving a distinct interpretive role.
 
 ---
 
-### `annexes/` — Architectural Elaboration
+## `annexes/` — Architectural Elaboration (DEPTH)
 
 Architectural annexes that elaborate and deepen the UCPIS white paper.
+Annexes expand understanding but **do not override** the canonical architecture.
 
-- `README.md` — Annex scope, status, and non-normative posture
-- `Annex_A_Agent_Agnostic_Interfaces.md`
-- `Annex_B_AI_as_Electrical_Load.md`
+- `README.md`  
+  *Annex scope, status, and non-normative posture*
+
+- `Annex_A_Definitions_Terminology_Taxonomy.md`
+- `Annex_B_AI_as_Electrical_and_Thermal_Load.md`
 - `Annex_C_Reference_Architecture_Diagrams.md`
 - `Annex_D_Threat_Model_and_Resilience.md`
 - `Annex_E_Standards_Alignment_and_Mapping.md`
+
 - `Annex_F_Reference_Implementation_Guidelines.md` *(Deferred)*
 - `Annex_G_Governance_Models.md` *(Deferred)*
 - `Annex_H_Interoperability_Profiles.md` *(Deferred)*
 
-Annexes A–E are active in v1.4. Annexes F–H are intentionally deferred to prevent
-premature standardization, governance capture, or implementation lock-in.
+**Status discipline:**
+- Annexes **A–E** are active in v1.4  
+- Annexes **F–H** are authored but intentionally **deferred** to prevent
+  premature standardization, governance capture, or implementation lock-in
 
 ---
 
-### `docs/` — Reader Guidance and Interpretation
+## `docs/` — Reader Guidance and Interpretation (ENTRY)
 
-Reader-facing documentation that supports correct interpretation and navigation
-of the UCPIS corpus.
+Reader-facing documentation that supports **correct interpretation and
+navigation** of the UCPIS corpus.
 
-- `README.md` — Scope and purpose of reader-guidance materials
-- `how-to-read-ucpis.md` — Recommended reading order and interpretive guidance
-- `ucpis-at-a-glance.md` — One-page classification of what UCPIS is and is not
-- `document-map.md` — Conceptual map of document relationships
-- `interpretation-notes.md` — Guardrails against common misinterpretations
+These documents introduce **no new architecture** and assert **no authority**.
 
-#### `docs/notes/` — Contextual Rationale (WHY)
+- `README.md`  
+  *Scope and purpose of reader-guidance materials*
+
+- `architecture-overview.md`  
+  *Concise, explanatory summary of the UCPIS v1.4 architecture  
+  (derivative; introduces no new architectural content)*
+
+- `how-to-read-ucpis.md`  
+  *Recommended reading order and interpretation guidance*
+
+- `ucpis-at-a-glance.md`  
+  *One-page classification of what UCPIS is and is not*
+
+- `document-map.md`  
+  *Conceptual map of document relationships and reading layers*
+
+- `interpretation-notes.md`  
+  *Explicit guardrails against common misinterpretations*
+
+---
+
+### `docs/notes/` — Contextual Rationale (WHY)
 
 Contextual and pre-normative design rationale explaining *why* architectural
 choices were made.
 
-- `README.md` — Notes posture and non-authoritative status
-- `interoperability-origin.md` — Civilizational interoperability motivation
-- `constrained-hmi-design-note.md` — Rationale for Constrained HMIs
-- `v1.5-activation-criteria.md` — Discipline document for future versioning
+Documents in this directory:
 
-If conflicts arise, the white paper and active annexes take precedence.
+- are **not canonical**
+- define **no scope, interfaces, or requirements**
+- preserve architectural intent and decision discipline
+
+Contents:
+
+- `README.md`  
+  *Notes posture and non-authoritative status*
+
+- `interoperability-origin.md`  
+  *Civilizational interoperability motivation and problem framing*
+
+- `constrained-hmi-design-note.md`  
+  *Design rationale for Constrained Human–Machine Interfaces*
+
+- `v1.5-activation-criteria.md`  
+  *Discipline document defining when a future version update would be justified  
+  (does not initiate v1.5 work)*
+
+If conflicts arise, the **white paper and active annexes take precedence**.
 
 ---
 
-### `white-paper/` — Canonical Architecture (WHAT)
+## `white-paper/` — Canonical Architecture (WHAT)
 
-The authoritative architectural definition of UCPIS.
+The authoritative architectural definition of UCPIS v1.4.
 
-- `README.md` — Orientation and non-normative posture
-- `UCPIS_White_Paper_v1.4.md` — Canonical reference architecture
+- `README.md`  
+  *Orientation and non-normative posture for the white paper*
+
+- `UCPIS_White_Paper_v1.4.md`  
+  *Canonical public reference architecture*
 
 ---
 
-### `prompts/` — Generation and Continuity Artifacts
+## `prompts/` — Generation and Continuity Artifacts
 
 Prompt artifacts used to generate, regenerate, and preserve continuity of
 UCPIS documentation.
@@ -84,7 +126,8 @@ These files are **not architectural documents** and define no scope,
 authority, or requirements. They exist solely to support reproducibility,
 intent preservation, and disciplined evolution.
 
-- `README.md` — Scope and interpretation rules for prompt artifacts
+- `README.md`  
+  *Scope and interpretation rules for prompt artifacts*
 
 - `UCPIS_White_Paper_Master_Prompt.md`  
   The **canonical public master prompt** used to reproduce the UCPIS v1.4
@@ -100,15 +143,15 @@ the **white paper and active annexes always take precedence**.
 
 ---
 
-### Repository Root Files — Governance, Attribution, and Metadata
+## Repository Root Files — Governance, Attribution, and Metadata
 
 - `.gitignore` — Repository hygiene configuration
 - `ATTRIBUTION.md` — Historical authorship and attribution
 - `CHANGELOG.md` — Versioned documentation changes
 - `CITATION.cff` — Machine-readable citation metadata
 - `DISCLAIMER.md` — Legal and practical limitations
-- `Governance_Without_Capture.md` — Governance posture statement
-- `HOW_TO_CITE_UCPIS.md` — Human-readable citation guidance
+- `Governance-Without-Capture.md` — Governance posture statement
+- `How-to-Cite-UCPIS.md` — Human-readable citation guidance
 - `LICENSE` — Creative Commons Attribution 4.0 (CC BY 4.0)
 - `README.md` — Repository overview and scope
 - `RELEASE_NOTES.md` — v1.4 release summary
@@ -151,9 +194,9 @@ The UCPIS v1.4 repository structure is designed to:
 - resist premature standardization or governance,
 - and support long-term public reference.
 
-Each directory boundary is intentional. Each README establishes scope and
-authority limits. Together, they form a durable, interpretable architectural
-corpus.
+Each directory boundary is intentional.  
+Each README establishes scope and authority limits.  
+Together, they form a durable, interpretable architectural corpus.
 
 ---
 
