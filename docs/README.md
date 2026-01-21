@@ -48,6 +48,13 @@ Paper or active Annexes, the **White Paper and Annexes take precedence**.
 
 These documents assist readers in interpreting and navigating UCPIS correctly:
 
+- **`architecture-overview.md`**  
+  A concise, explanatory summary of the UCPIS v1.4 architecture, intended to
+  help readers grasp the system quickly before engaging with the full white
+  paper.  
+  This document introduces **no new architecture** and derives entirely from
+  the canonical white paper.
+
 - **`how-to-read-ucpis.md`**  
   Explains how to approach the UCPIS documentation set, recommended reading
   order, and common misreadings to avoid.
