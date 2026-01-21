@@ -15,7 +15,7 @@ It defines **no compliance requirements**, **no certifications**, and
 **no enforcement mechanisms**.
 
 This page serves as the **canonical public landing page** for the UCPIS
-white paper corpus.
+white paper corpus and associated contextual documentation.
 
 ---
 
@@ -104,7 +104,7 @@ conformance claims are published.
 
 ### Supporting Annexes (Informative / Non-Normative)
 
-- **Annex A** — Conceptual Model & Definitions  
+- **Annex A** — Definitions, Terminology, and Taxonomy  
 - **Annex B** — Interfaces & Data Model  
 - **Annex C** — Reference Architecture Diagrams  
 - **Annex D** — Threat Model & Resilience  
@@ -122,6 +122,35 @@ They will be activated only if justified by external evidence or adoption.
 
 ---
 
+## Contextual Design Notes (Non-Normative)
+
+In addition to the canonical white paper and annexes, UCPIS includes
+**contextual design notes** that preserve architectural motivation and
+design rationale without expanding scope or authority.
+
+These documents are **informative only** and are not part of the UCPIS
+specification.
+
+They are located under:  
+https://github.com/ucpis2026us/ucpis/tree/main/docs/notes
+
+Key documents include:
+
+- **Interoperability Origin and Architectural Rationale**  
+  (`docs/notes/interoperability-origin.md`)  
+  Explains the civilizational interoperability gap that motivated UCPIS
+  and frames interoperability as an architectural problem.
+
+- **Constrained Human–Machine Interfaces — Design Note**  
+  (`docs/notes/constrained-hmi-design-note.md`)  
+  Explains why and how constrained HMIs are used to safely integrate
+  humans into cyber-physical systems.
+
+If any conflict arises between these notes and the white paper or annexes,
+the white paper takes precedence.
+
+---
+
 ## Governance Position
 
 UCPIS asserts **no governance authority**.
@@ -132,7 +161,7 @@ architecture.
 
 See:
 - **[Governance Without Capture](https://github.com/ucpis2026us/ucpis/blob/main/Governance_Without_Capture.md)**
-- **[Annex G](https://github.com/ucpis2026us/ucpis/blob/main/annexes/Annex_G_Governance_Models.md) — Governance Models (Deferred)**
+- **[Annex G](https://github.com/ucpis2026us/ucpis/blob/main/annexes/Annex_G_Governance_Models.md)** *(Deferred)*
 
 ---
 
