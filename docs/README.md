@@ -14,13 +14,15 @@ intended to support understanding, navigation, and long-term stewardship of
 the UCPIS architecture.
 
 Documents in this directory are **not part of the canonical architecture** and
-do not define requirements, interfaces, or authority.
+do not define requirements, interfaces, profiles, implementations, or authority.
 
 Their role is to:
+
 - help readers orient themselves,
-- prevent misinterpretation of scope or intent,
 - explain how to read and navigate the UCPIS corpus,
-- preserve clarity as the project ages.
+- prevent misinterpretation of scope or intent,
+- preserve architectural clarity as the project ages,
+- support institutional and archival review.
 
 ---
 
@@ -29,13 +31,14 @@ Their role is to:
 All materials in `docs/` are **informative and non-normative**.
 
 They:
+
 - define no compliance obligations,
 - specify no implementations,
 - assert no governance authority,
 - and must not be treated as architectural requirements.
 
 If any conflict arises between documents in this directory and the UCPIS White
-Paper or Annexes, the **White Paper and Annexes take precedence**.
+Paper or active Annexes, the **White Paper and Annexes take precedence**.
 
 ---
 
@@ -43,78 +46,92 @@ Paper or Annexes, the **White Paper and Annexes take precedence**.
 
 ### Reader Guides
 
-These documents assist readers in interpreting and navigating UCPIS:
+These documents assist readers in interpreting and navigating UCPIS correctly:
 
 - **`how-to-read-ucpis.md`**  
   Explains how to approach the UCPIS documentation set, recommended reading
   order, and common misreadings to avoid.
 
 - **`ucpis-at-a-glance.md`**  
-  A one-page classification artifact describing what UCPIS is and is not.
+  A one-page classification artifact summarizing what UCPIS is, what it is not,
+  and the role it is intended to play.
 
 - **`document-map.md`**  
-  Visual and conceptual map of how UCPIS documents relate to one another.
+  A conceptual map showing how UCPIS documents relate across layers
+  (WHY / WHAT / DEPTH / READER ORIENTATION).
 
 - **`interpretation-notes.md`**  
-  Explicit guardrails against common misinterpretations.
+  Explicit guardrails against common misinterpretations, authority projection,
+  or assumptions of implementability.
 
 ---
 
 ### Contextual Notes
 
-The `docs/notes/` subdirectory contains **architectural rationale and design
-intent** that is intentionally kept separate from canonical definitions.
+The `docs/notes/` subdirectory contains **contextual and pre-normative design
+rationale**.
+
+These documents explain *why* architectural choices were made, without defining
+UCPIS behavior, scope, authority, or obligations.
 
 See:
-- `docs/notes/README.md`
 
-Documents in `docs/notes/` explain *why* certain architectural choices were
-made, but do not define UCPIS behavior or scope.
+- **`docs/notes/README.md`** — scope and posture of contextual notes
+- **`docs/notes/interoperability-origin.md`** — civilizational interoperability motivation
+- **`docs/notes/constrained-hmi-design-note.md`** — rationale for Constrained HMIs
+- **`docs/notes/v1.5-activation-criteria.md`** — discipline document for future versioning
+
+If any conflict arises, **canonical architecture documents take precedence**.
 
 ---
 
 ## Relationship to Other Repository Areas
 
-Within the UCPIS repository, documentation is intentionally layered:
+The UCPIS repository is intentionally layered to prevent scope confusion:
 
 - **`index.md`**  
-  Canonical public landing page.
+  Canonical public landing page and entry point.
 
 - **`white-paper/`**  
-  Canonical architectural reference.
+  Canonical architectural definition of UCPIS v1.4.
 
 - **`annexes/`**  
-  Architectural elaboration and depth.
+  Architectural elaboration and depth (informative, non-normative).
 
 - **`docs/`**  
-  Reader guidance, interpretation, and context.
+  Reader guidance, interpretation, and contextual clarity.
 
-This separation ensures clarity, durability, and resistance to scope creep.
+This separation ensures durability, interpretability, and resistance to
+premature institutionalization.
 
 ---
 
 ## What Does Not Belong Here
 
-The `docs/` directory must not contain:
-- implementation guidance,
-- reference code,
-- schemas or APIs,
-- performance claims,
-- examples framed as recommendations,
-- future roadmaps.
+The `docs/` directory must **not** contain:
 
-Such material, if ever appropriate, belongs in explicitly scoped locations and
-only after versioned architectural changes.
+- implementation guidance or reference code,
+- schemas, APIs, or executable artifacts,
+- performance claims or benchmarks,
+- examples framed as recommendations,
+- future roadmaps or activation plans.
+
+Such material, if ever appropriate, belongs only in explicitly scoped locations
+and only after versioned architectural changes.
 
 ---
 
 ## Summary
 
-The `docs/` directory exists to support **correct reading**, not to expand the
+The `docs/` directory exists to support **correct reading**, not to expand
 architecture.
 
-By separating interpretation from definition, UCPIS remains understandable,
-reviewable, and stable over long time horizons.
+By separating interpretation from definition, UCPIS remains:
+
+- understandable,
+- reviewable,
+- resistant to misuse,
+- and stable over long time horizons.
 
 ---
 
