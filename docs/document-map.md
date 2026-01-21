@@ -17,26 +17,47 @@ It is a navigation aid, not a specification.
 UCPIS documentation is intentionally layered:
 
 WHY (Rationale)
+
 │
+
 ├─ docs/notes/
+
 │ ├─ interoperability-origin.md
+
 │ └─ constrained-hmi-design-note.md
+
 │
+
 WHAT (Architecture)
+
 │
+
 ├─ white-paper/
+
 │ └─ UCPIS White Paper v1.4
+
 │
+
 DEPTH (Elaboration)
+
 │
+
 ├─ annexes/
+
 │ ├─ Annex A–E (Active)
+
 │ └─ Annex F–H (Deferred)
+
 │
+
 ENTRY (Public Orientation)
+
 │
+
 ├─ index.md
+
 └─ README.md
+
 
 
 ---
