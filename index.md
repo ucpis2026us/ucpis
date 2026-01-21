@@ -15,7 +15,7 @@ It defines **no compliance requirements**, **no certifications**, and
 **no enforcement mechanisms**.
 
 This page serves as the **canonical public landing page** for the UCPIS
-white paper corpus and associated contextual documentation.
+white paper corpus and associated interpretive documentation.
 
 ---
 
@@ -28,7 +28,7 @@ white paper corpus and associated contextual documentation.
 - Architectural treatment of energy, safety, governance, and environment
 - Informative guidance suitable for public infrastructure and industry
 
-Human autonomy profiles are used **solely to scope interfaces and
+Human autonomy classes are used **solely to scope interfaces and
 safeguards** and are defined informatively in Annex A.
 They are **not diagnostic, evaluative, hierarchical, or prescriptive**.
 
@@ -95,6 +95,37 @@ conformance claims are published.
 
 ---
 
+## Start Here — Reader Orientation
+
+For readers new to UCPIS, the following documents provide orientation
+*without introducing new architecture*:
+
+- **Architecture Overview (Concise Summary)**  
+  `docs/architecture-overview.md`  
+  A short, explanatory summary of the UCPIS v1.4 architecture, derived
+  entirely from the white paper.
+
+- **How to Read UCPIS**  
+  `docs/how-to-read-ucpis.md`  
+  Recommended reading order and guidance on interpreting the corpus.
+
+- **UCPIS at a Glance**  
+  `docs/ucpis-at-a-glance.md`  
+  One-page classification of what UCPIS is and is not.
+
+- **Document Map**  
+  `docs/document-map.md`  
+  Explains how UCPIS documents relate across rationale, architecture,
+  elaboration, and reader guidance.
+
+- **Interpretation Notes**  
+  `docs/interpretation-notes.md`  
+  Guardrails against common misinterpretations or authority projection.
+
+All reader-orientation documents are **informative only**.
+
+---
+
 ## Canonical Documents
 
 ### UCPIS White Paper
@@ -105,7 +136,7 @@ conformance claims are published.
 ### Supporting Annexes (Informative / Non-Normative)
 
 - **Annex A** — Definitions, Terminology, and Taxonomy  
-- **Annex B** — Interfaces & Data Model  
+- **Annex B** — AI as Electrical and Thermal Load  
 - **Annex C** — Reference Architecture Diagrams  
 - **Annex D** — Threat Model & Resilience  
 - **Annex E** — Standards Alignment & Mapping  
@@ -118,18 +149,17 @@ https://github.com/ucpis2026us/ucpis/tree/main/annexes
 
 Deferred annexes are intentionally withheld to prevent premature
 standardization, governance capture, or implementation lock-in.
-They will be activated only if justified by external evidence or adoption.
+They may be activated only if justified by external evidence.
 
 ---
 
 ## Contextual Design Notes (Non-Normative)
 
-In addition to the canonical white paper and annexes, UCPIS includes
-**contextual design notes** that preserve architectural motivation and
-design rationale without expanding scope or authority.
+UCPIS includes **contextual design notes** that preserve architectural
+motivation and design rationale without expanding scope or authority.
 
-These documents are **informative only** and are not part of the UCPIS
-specification.
+These documents are **informative only** and are not part of the
+canonical architecture.
 
 They are located under:  
 https://github.com/ucpis2026us/ucpis/tree/main/docs/notes
@@ -137,17 +167,18 @@ https://github.com/ucpis2026us/ucpis/tree/main/docs/notes
 Key documents include:
 
 - **Interoperability Origin and Architectural Rationale**  
-  (`docs/notes/interoperability-origin.md`)  
-  Explains the civilizational interoperability gap that motivated UCPIS
-  and frames interoperability as an architectural problem.
+  (`docs/notes/interoperability-origin.md`)
 
 - **Constrained Human–Machine Interfaces — Design Note**  
-  (`docs/notes/constrained-hmi-design-note.md`)  
-  Explains why and how constrained HMIs are used to safely integrate
-  humans into cyber-physical systems.
+  (`docs/notes/constrained-hmi-design-note.md`)
 
-If any conflict arises between these notes and the white paper or annexes,
-the white paper takes precedence.
+- **v1.5 Activation Criteria**  
+  (`docs/notes/v1.5-activation-criteria.md`)  
+  Discipline document describing when a future version update would be
+  justified. It does **not** initiate v1.5 work.
+
+If any conflict arises between notes and canonical documents,
+the **white paper and active annexes take precedence**.
 
 ---
 
@@ -160,8 +191,9 @@ only if and when multiple independent stakeholders adopt or steward the
 architecture.
 
 See:
-- **[Governance Without Capture](https://github.com/ucpis2026us/ucpis/blob/main/Governance_Without_Capture.md)**
-- **[Annex G](https://github.com/ucpis2026us/ucpis/blob/main/annexes/Annex_G_Governance_Models.md)** *(Deferred)*
+- **Governance Without Capture**  
+  https://github.com/ucpis2026us/ucpis/blob/main/Governance-Without-Capture.md
+- **Annex G — Governance Models** *(Deferred)*
 
 ---
 
@@ -170,11 +202,11 @@ See:
 - Stable public informational release (v1.4)
 - Architecture defined; implementations are future work
 - Informative and non-normative
-- Designed for long-term public archival and reference
+- Designed for long-term public archival and institutional reference
 
 Future updates, if any, will prioritize **clarity, interpretability,
-and resistance to misinterpretation**, rather than expanded scope,
-authority, or execution.
+and misuse resistance**, rather than expanded scope, authority,
+or execution.
 
 No subsequent version is active at this time.
 
