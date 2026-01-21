@@ -19,58 +19,91 @@ source of architectural authority.
 UCPIS documentation is intentionally layered to separate **rationale,
 architecture, elaboration, and reader orientation**.
 
-### WHY — Rationale and Design Intent
+Understanding *where* a document sits in this structure is essential to
+understanding *how it should be read*.
+
+---
+
+## WHY — Rationale and Design Intent
 
 Contextual documents that explain *why* architectural choices were made.
-These documents preserve intent but do not define behavior or scope.
+
+These documents preserve intent and motivation but **do not define behavior,
+scope, interfaces, or authority**.
 
 - `docs/notes/`
-  - `interoperability-origin.md`
-  - `constrained-hmi-design-note.md`
-  - `v1.5-activation-criteria.md`
+  - `interoperability-origin.md`  
+    *Civilizational and architectural motivation for UCPIS*
+  - `constrained-hmi-design-note.md`  
+    *Design rationale for Constrained Human–Machine Interfaces*
+  - `v1.5-activation-criteria.md`  
+    *Discipline document defining conditions for future version activation*
+  - `README.md`  
+    *Scope and non-authoritative posture of contextual notes*
 
 ---
 
-### WHAT — Canonical Architecture
+## WHAT — Canonical Architecture
 
-The authoritative architectural definition of UCPIS.
+The authoritative architectural definition of UCPIS v1.4.
+
+These documents define the architecture and take precedence over all others.
 
 - `white-paper/`
-  - `UCPIS White Paper v1.4`
-  - `README.md` (white paper orientation)
+  - `UCPIS_White_Paper_v1.4.md`  
+    *Canonical public reference architecture*
+  - `README.md`  
+    *Orientation and non-normative posture for the white paper*
 
 ---
 
-### DEPTH — Architectural Elaboration
+## DEPTH — Architectural Elaboration
 
 Structured expansion of the architecture into specific dimensions.
-Annexes elaborate but do not override the white paper.
+
+Annexes **elaborate but do not override** the white paper.
 
 - `annexes/`
-  - **Annex A–E** — Active (Definitions, Architecture, Threats, Alignment)
-  - **Annex F–H** — Deferred (Implementation, Governance, Profiles)
-  - `README.md` (annex status and posture)
+  - **Annex A–E** — Active  
+    *Definitions, reference architecture, threat model, standards alignment*
+  - **Annex F–H** — Deferred  
+    *Implementation guidance, governance models, interoperability profiles*
+  - `README.md`  
+    *Annex scope, status, and deferral posture*
 
 ---
 
-### ENTRY — Public Orientation
+## ENTRY — Public Orientation
 
-Top-level documents intended to orient first-time readers and reviewers.
+Top-level documents intended to orient first-time readers, reviewers, and
+institutions.
 
-- `index.md` — Canonical public landing page
-- `README.md` — Repository orientation and contribution context
+- `index.md`  
+  *Canonical public landing page*
+- `README.md`  
+  *Repository overview, scope, and non-goals*
 
 ---
 
-### READER GUIDANCE — How to Interpret the Corpus
+## READER GUIDANCE — How to Interpret the Corpus
 
-Documents that help readers navigate and correctly interpret UCPIS materials.
+Documents that help readers understand **how to read UCPIS correctly**, without
+adding scope or authority.
 
 - `docs/`
-  - `how-to-read-ucpis.md`
-  - `ucpis-at-a-glance.md`
-  - `interpretation-notes.md`
-  - `README.md` (documentation orientation)
+  - `architecture-overview.md`  
+    *Concise, explanatory summary of the UCPIS v1.4 architecture  
+    (derivative; introduces no new architecture)*
+  - `how-to-read-ucpis.md`  
+    *Recommended reading order and interpretation guidance*
+  - `ucpis-at-a-glance.md`  
+    *One-page classification of what UCPIS is and is not*
+  - `document-map.md`  
+    *This document*
+  - `interpretation-notes.md`  
+    *Explicit guardrails against common misinterpretations*
+  - `README.md`  
+    *Orientation and posture for reader-guidance materials*
 
 ---
 
