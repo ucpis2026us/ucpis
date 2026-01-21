@@ -1,250 +1,217 @@
-# UCPIS v1.5 Upgrade Knowledge Transfer (Internal)
+# UCPIS v1.5 — Knowledge Transfer and Continuity Notes
 
-Copy/paste this document into another working thread or private planning
-space to carry forward the v1.5 posture and preparation artifacts while
-continuing refinement of UCPIS v1.4.
-
----
-
-## Context
-
-A full UCPIS v1.4 harmonization pass has been completed across the
-documentation corpus, including:
-
-- White Paper v1.4  
-  (structure corrected; three-layer model unified; explicit environmental
-  and biological context; governance posture clarified; MVUE tightened to
-  conceptual-only)
-
-- Annex A  
-  (Human Autonomy Classes formalized as informational; Non-Human Biological
-  Actors added as environmental context)
-
-- Annex C  
-  (Reference Architecture updated to include environmental/biological
-  context; human integration aligned to Annex A)
-
-- Annex D  
-  (Threat Model & Resilience expanded to include environmental and
-  biological risk factors; resilience framed as structural absorption)
-
-- Annex E  
-  (Standards Alignment expanded to include public-domain civic principles
-  and open systems; alignment-only posture reinforced)
-
-- Annex F  
-  (Reference Implementation Guidelines authored; minimal deltas for
-  environment/biology acknowledgment; deferred until executable artifacts
-  exist)
-
-- Annex G  
-  (Governance Models updated: deferred, anti-capture, human-only authority,
-  environmental/biological context included)
-
-- Annex H  
-  (Interoperability Profiles updated: deferred, evidence-derived; profiles
-  constrain interfaces, not authority; environmental/biological context
-  included)
-
-- Governance Without Capture statement  
-- SECURITY.md  
-- README.md, index.md, repository-structure.md  
-- CHANGELOG.md and RELEASE_NOTES.md  
-
-All materials are harmonized to UCPIS v1.4.
-Posture is stable and institution-safe.
+**Document Status:** Informative / Internal Continuity Artifact  
+**Public Visibility:** Permitted  
+**Authority:** None  
+**Version Context:** UCPIS v1.4 (Stable)
 
 ---
 
-## Key v1.4 Positions (Locked)
+## Purpose
 
-- Informative / non-normative architecture only
+This document exists to **preserve context, posture, and continuity** across
+working threads or private planning spaces while UCPIS v1.4 remains the active,
+public architectural reference.
+
+It is a **knowledge-transfer aid**, not a plan, roadmap, or commitment.
+
+Nothing in this document:
+- activates v1.5 work,
+- modifies the public architecture,
+- authorizes governance, implementation, or execution,
+- or implies that a v1.5 release is planned or imminent.
+
+If a v1.5 release ever occurs, it must be explicitly versioned, published,
+and justified independently of this document.
+
+---
+
+## v1.4 Context (Locked)
+
+A full harmonization pass has been completed across the UCPIS v1.4 corpus.
+
+Key outcomes include:
+
+- **White Paper v1.4**  
+  - Three-layer conceptual architecture unified  
+  - Environmental and biological context explicit  
+  - Governance posture clarified  
+  - MVUE constrained to conceptual framing only  
+
+- **Annex A**  
+  - Human Autonomy Classes formalized as informational  
+  - Non-human biological entities treated as environmental context  
+
+- **Annex C**  
+  - Reference architecture aligned with Annex A  
+  - Human and environmental integration clarified  
+
+- **Annex D**  
+  - Threat and resilience framing expanded  
+  - Resilience defined as structural absorption  
+
+- **Annex E**  
+  - Alignment-only posture reinforced  
+  - Public-domain and open-systems framing clarified  
+
+- **Annex F**  
+  - Authored but explicitly deferred until executable artifacts exist  
+
+- **Annex G**  
+  - Governance models deferred  
+  - Anti-capture posture reinforced  
+  - Human-only authority clarified  
+
+- **Annex H**  
+  - Interoperability profiles deferred  
+  - Evidence-derived activation requirement recorded  
+
+- Repository-wide alignment:
+  - `Governance-Without-Capture.md`
+  - `SECURITY.md`
+  - `README.md`, `index.md`, `repository-structure.md`
+  - `CHANGELOG.md`, `RELEASE_NOTES.md`
+
+All materials are internally consistent and institution-safe as v1.4.
+
+---
+
+## v1.4 Positions (Non-Negotiable)
+
+The following positions are **locked** in v1.4:
+
+- Informative, non-normative architecture only
 - No compliance, certification, or enforcement
 - No normative security controls
 - Governance deferred; governance-without-capture posture
 - Human authority and accountability only
 - Animals and wildlife treated as environmental context
-  (not agents, not governance participants)
-- Three-layer conceptual architecture
-  (any additional “layers” are subdomains only)
-- MVUE is conceptual only in v1.4
-- Annex F is authored but deferred until code exists
+- Three-layer conceptual architecture (no additional layers)
+- MVUE defined as conceptual only
+- Annex F authored but deferred until code exists
+
+These positions must remain intact unless explicitly revised via a future,
+published version.
 
 ---
 
-## v1.5 Posture (High-Level)
+## v1.5 Posture (Continuity Framing Only)
 
-Guiding concept:
+This section records **how to think about a possible future revision** if one
+ever becomes necessary.
 
-- **v1.4 = coherence**
-- **v1.5 = credibility under observation**
+Guiding distinction:
 
-v1.5 is intended to strengthen **external interpretability and misuse
-resistance**, not to add features, authority, or execution.
+- **v1.4 = architectural coherence**
+- **v1.5 (if any) = interpretability under observation**
 
-### Explicit Non-Goals for v1.5
+A future v1.5 would exist only to:
+- reduce misinterpretation,
+- strengthen resistance to misuse,
+- clarify boundaries already present in v1.4.
 
-v1.5 must **not**:
+It would **not** exist to add scope, authority, or execution.
+
+---
+
+## Explicit Non-Goals for Any v1.5
+
+A future v1.5 must not:
 
 - Activate governance (Annex G remains deferred)
 - Publish interoperability profiles (Annex H remains deferred)
 - Define security controls
-- Become a standards draft or certification program
-- Introduce vendor endorsements or implementations
+- Become a standards draft or certification regime
+- Introduce vendor alignment or endorsements
 - Expand human classifications into diagnostics or sociology
-- Add ethics, welfare, or moral authority mandates
+- Introduce ethical, welfare, or moral authority mandates
+
+If any of the above are required, the project scope has changed and UCPIS
+should not proceed under the same framing.
 
 ---
 
-## Four Pillars for v1.5 Preparation
+## Continuity Pillars (For Internal Reasoning Only)
+
+These pillars describe *how to evaluate pressure*, not what to build.
 
 1. **Misinterpretation Resistance**  
-   Tighten language where ambiguity enables misuse. Add explicit
-   “what this does NOT imply” guardrails.
+   Identify and close language paths that allow authority projection or misuse.
 
-2. **Non-Executable Architectural Stress Scenarios**  
-   Describe stress conditions (energy constraint, human absence,
-   environmental interference, governance fragmentation) without
-   prescribing controls or mitigations.
+2. **Architectural Stress Awareness**  
+   Describe stress conditions without prescribing controls, mitigations, or
+   execution paths.
 
 3. **Pre-MVUE Guardrails**  
-   Define what disqualifies a demo or prototype from being labeled an
-   MVUE. Prevent premature capture via “reference implementations.”
+   Prevent premature labeling of demos or prototypes as UCPIS artifacts.
 
-4. **Evidence Intake Framing**  
-   Define what kinds of external evidence *could* justify future
-   activation of Annex H or Annex G — and what evidence explicitly does
-   not.
+4. **Evidence Intake Discipline**  
+   Define what kinds of external evidence *could* justify revisiting deferrals,
+   and what evidence explicitly does not.
 
 ---
 
-## Internal Artifact 1: v1.5 Intent Memo
+## Internal Continuity Artifacts (Non-Public)
 
-# UCPIS v1.5 — Intent Memo (Internal)
+The following artifacts are **conceptual placeholders only**.  
+They are **not documents to be published** unless explicitly re-authored.
 
-**Document Status:** Internal / Not for Publication  
-**Prepared By:** Michael James Malecek  
-**Date:** 2026  
-**Related Public Version:** UCPIS v1.4  
+### A. v1.5 Intent Memo (Internal Concept)
 
-### Purpose
+Purpose:
+- Record internal reasoning if interpretability risks emerge
+- Preserve posture continuity without public signaling
 
-This memo records internal intent for a potential UCPIS v1.5 release.
-It does not authorize publication, scope expansion, or governance
-activation.
-
-v1.5 is intended to strengthen interpretability, resilience, and misuse
-resistance without altering UCPIS’s non-normative, non-governing posture.
-
-### Context
-
-The primary post-v1.4 risk is **external misinterpretation**, not
-technical insufficiency. v1.5 exists to address that risk *before* code,
-pilots, or governance emerge.
-
-### Intent (Non-Goals)
-
-v1.5 will not activate governance, define controls, publish profiles, or
-introduce executable artifacts. All deferrals remain intact.
-
-### Focus Areas
-
-- Misinterpretation resistance
-- Architectural stress awareness
-- Pre-implementation guardrails
-- Evidence intake framing
-
-### Release Posture
-
-> “An interpretability and stress-readiness update to a stable reference
-> architecture — not an expansion of scope or authority.”
-
-### Decision Gate
-
-Proceed only if external pressure or demonstrated confusion cannot be
-responsibly ignored. Otherwise, v1.4 remains sufficient.
+Status:
+- Not authorized for publication
+- Not evidence of future work
 
 ---
 
-## Internal Artifact 2: v1.5 Preparation Checklist (Private)
+### B. v1.5 Preparation Checklist (Internal Concept)
 
-# UCPIS v1.5 — Internal Preparation Checklist
+Purpose:
+- Track signals of misinterpretation or capture pressure
+- Delay reaction until evidence is clear
 
-**Status:** Private / Working Document  
-**Do Not Publish**
+Checklist categories may include:
+- Misuse of autonomy classes
+- Governance projection
+- Premature implementation claims
+- Anthropomorphization of environment or agents
+- Vendor or institutional capture attempts
 
-### A. External Signal Tracking
-
-- [ ] Readers inferring governance authority where none exists
-- [ ] Requests focused on implementation rather than interpretation
-- [ ] Human autonomy classes misused as hierarchy or evaluation
-- [ ] Animals/environment anthropomorphized as agents
-- [ ] Agent-agnostic interfaces mistaken for autonomy or compliance claims
-
----
-
-### B. Language Stress Test
-
-- [ ] Ambiguous terms enabling overreach
-- [ ] Phrases implying inevitability or roadmap
-- [ ] Sections collapsing architecture into policy or control
-- [ ] Annex cross-references frequently misunderstood
-- [ ] Language quotable out of context to imply authority
+If pressure is observed:
+- document it,
+- do not respond reflexively,
+- do not expand scope.
 
 ---
 
-### C. Architectural Stress Scenarios (Non-Executable)
+## Decision Boundary
 
-- [ ] Energy-constrained operation scenario
-- [ ] Human absence or degradation scenario
-- [ ] Environmental interference scenario
-- [ ] Governance fragmentation scenario
-- [ ] Failure-without-blame framing preserved
+A future version should proceed **only if**:
 
-(No controls. No mitigations. No prescriptions.)
-
----
-
-### D. MVUE Guardrail Readiness
-
-- [ ] Clear disqualification criteria for invalid “MVUE” claims
-- [ ] Language preventing vendor compliance assertions
-- [ ] Explicit statement that demos ≠ adoption
-- [ ] Clear separation between interface exercise and system validity
-
----
-
-### E. Annex Stability Check
-
-- [ ] Annex A terminology still sufficient
-- [ ] Annex C architecture still internally consistent
-- [ ] Annex D resilience framing intact without security creep
-- [ ] Annex F deferral holding under pressure
-- [ ] Annex G and H still safely deferred
-
----
-
-### F. Governance & Capture Watch
-
-- [ ] Pressure to formalize stewardship
-- [ ] Requests for certification or conformance
-- [ ] Attempts to centralize authority around UCPIS artifacts
-
-If any occur → document pressure, do not respond reflexively.
-
----
-
-### G. Release Decision Criteria
-
-Proceed with v1.5 only if:
-- [ ] Clarification is demonstrably required
-- [ ] Architecture remains the primary subject
-- [ ] No authority expansion is needed
-- [ ] Deferral discipline can be maintained
+- clarification is demonstrably required,
+- architecture remains the primary subject,
+- no authority expansion is needed,
+- deferral discipline can be maintained.
 
 Otherwise:
-- [ ] Continue observation under v1.4
+- v1.4 remains sufficient,
+- continued observation is the correct action.
 
 ---
 
-**End of Internal Checklist**
+## Status
+
+This document is:
+- a continuity aid,
+- a guardrail against drift,
+- and a reminder that **not acting is often the correct architectural choice**.
+
+It carries **no authority** and defines **no commitments**.
+
+---
+
+**End of Knowledge Transfer Notes**
